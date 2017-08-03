@@ -4,6 +4,17 @@
 
 
 {
+"title": "Sonar Collector",
+"tags": "",
+"keywords": "",
+"url": "Hygieia2.html",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "All About Hygieia API",
 "tags": "",
 "keywords": "",
@@ -30,6 +41,17 @@
 "tags": "",
 "keywords": "",
 "url": "architecture.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Sonar Collector",
+"tags": "",
+"keywords": "",
+"url": "artifactory.html",
 "summary": ""
 }
 ,
@@ -146,6 +168,17 @@
 
 
 
+{
+"title": "Sonar Collector",
+"tags": "",
+"keywords": "",
+"url": "features.html",
+"summary": ""
+}
+,
+
+
+
 
 
 {
@@ -230,6 +263,17 @@
 "tags": "",
 "keywords": "",
 "url": "jira.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Sonar Collector",
+"tags": "",
+"keywords": "",
+"url": "sonar.html",
 "summary": ""
 }
 ,
@@ -436,51 +480,7 @@
 "title": "",
 "tags": "",
 "keywords": "",
-"url": "kbhome.html",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "Hygieia Artifact Collectors / Artifactory",
-"tags": "",
-"keywords": "",
-"url": "pageskbCollectorsArtifactoryartifactory.html",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "Hygieia Nexus IQ Collector",
-"tags": "",
-"keywords": "",
-"url": "pageskbCollectorsLibrary_Policylibrarypolicy.html",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "How to use Hygieia 2.0 features",
-"tags": "",
-"keywords": "",
-"url": "pageskbUpcomingHygieia2.html",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "Hygieia New Features Released ##",
-"tags": "",
-"keywords": "",
-"url": "pageskbUpcomingfeatures.html",
+"url": "hygieiahome.html",
 "summary": ""
 }
 ,

@@ -26,6 +26,12 @@
   
   
   <url>
+    <loc>http://localhost:4000/Hygieia2.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4000/api.html</loc>
   </url>
   
@@ -39,6 +45,12 @@
   
   <url>
     <loc>http://localhost:4000/architecture.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/artifactory.html</loc>
   </url>
   
   
@@ -103,6 +115,12 @@
   
   
   
+  <url>
+    <loc>http://localhost:4000/features.html</loc>
+  </url>
+  
+  
+  
   
   
   <url>
@@ -149,6 +167,12 @@
   
   <url>
     <loc>http://localhost:4000/jira.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/sonar.html</loc>
   </url>
   
   
@@ -270,31 +294,7 @@
   
   
   <url>
-    <loc>http://localhost:4000/kb/home.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>http://localhost:4000/pages/kb/Collectors/Artifactory/artifactory.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>http://localhost:4000/pages/kb/Collectors/Library_Policy/librarypolicy.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>http://localhost:4000/pages/kb/Upcoming/Hygieia2.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>http://localhost:4000/pages/kb/Upcoming/features.html</loc>
+    <loc>http://localhost:4000/hygieia/home.html</loc>
   </url>
   
   
