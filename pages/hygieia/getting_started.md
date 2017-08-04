@@ -5,9 +5,10 @@ type: first_page
 homepage: true
 toc: false
 sidebar: hygieia_sidebar
-permalink: home.html
+permalink: getting_started.html
 redirect_to: 
   - https://developer.capitalone.com/opensource-projects/hygieia 
+redirect_from:
   - /index.html
   - /hygieia/getting_started.html
 ---
