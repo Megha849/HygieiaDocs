@@ -5,7 +5,7 @@ keywords:
 summary: Know the basics of installing and configuring Hygieia 
 sidebar: hygieia_sidebar
 permalink: gettingstarted.html
-folder: kb
+folder: hygieia
 ---
 
 ![Image](/UI/src/assets/img/hygieia_b.png)

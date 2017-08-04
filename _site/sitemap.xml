@@ -124,6 +124,12 @@
   
   
   <url>
+    <loc>http://localhost:4000/home.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4000/gettingstarted.html</loc>
   </url>
   
@@ -143,12 +149,6 @@
   
   <url>
     <loc>http://localhost:4000/gitsetup.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>http://localhost:4000/home.html</loc>
   </url>
   
   
@@ -283,18 +283,6 @@
   
   <url>
     <loc>http://localhost:4000/xldeploy.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>http://localhost:4000/index.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>http://localhost:4000/hygieia/home.html</loc>
   </url>
   
   

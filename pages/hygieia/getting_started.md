@@ -6,9 +6,10 @@ homepage: true
 toc: false
 sidebar: hygieia_sidebar
 permalink: home.html
-redirect_from:
+redirect_to: 
+  - https://developer.capitalone.com/opensource-projects/hygieia 
   - /index.html
-  - /hygieia/home.html
+  - /hygieia/getting_started.html
 ---
 
 ## Overview  
