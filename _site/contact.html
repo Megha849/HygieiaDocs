@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="keywords" content=" ">
-<title> | Hygieia</title>
+<title>Contact Us | Hygieia</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:hygieia@capitalone.com?subject=Hygieia Documentation feedback&body=I have some feedback about the  page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:hygieia@capitalone.com?subject=Hygieia Documentation feedback&body=I have some feedback about the Contact Us page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -144,7 +144,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Contact Us">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -374,7 +374,7 @@
     <div class="col-md-9">
         
 <div class="post-header">
-   <h1 class="post-title-main"></h1>
+   <h1 class="post-title-main">Contact Us</h1>
 </div>
 
 
@@ -385,35 +385,11 @@
    
 
     
-    
-<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
-
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2' });
-
-/* this offset helps account for the space taken up by the floating toolbar. */
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
-
-  $(window).scrollTop(scroll_target - 10);
-  return false
-})
-
-});
-</script>
-
-<div id="toc"></div>
-
-    
 
 
     
 
-  
-<p>We would love to hear from you!</p>
+  <p>We would love to hear from you!</p>
 
 <h4 id="gitter-chat">Gitter Chat</h4>
 
