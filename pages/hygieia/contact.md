@@ -13,5 +13,5 @@ Click [here](https://gitter.im/capitalone/Hygieia) to connect with us on Gitter.
 
 #### Email Us
 
-You can email your questions to the core [Hygieia Team](mailto:hygieia@capitalone.com). 
+To email your questions, simply click the **Feedback** button on the top navigation bar.
  
