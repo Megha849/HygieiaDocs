@@ -1,4 +1,10 @@
-
+---
+title: Contact Us
+tags: 
+toc: false
+sidebar: hygieia_sidebar
+permalink: contact.html
+---
 We would love to hear from you!
 
 #### Gitter Chat
