@@ -124,13 +124,7 @@
   
   
   <url>
-    <loc>http://localhost:4000/home.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>http://localhost:4000/gettingstarted.html</loc>
+    <loc>http://localhost:4000/getting_started.html</loc>
   </url>
   
   
@@ -283,6 +277,18 @@
   
   <url>
     <loc>http://localhost:4000/xldeploy.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/index.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/hygieia/getting_started.html</loc>
   </url>
   
   

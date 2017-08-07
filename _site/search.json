@@ -185,19 +185,8 @@
 "title": "Introduction",
 "tags": "",
 "keywords": "",
-"url": "home.html",
+"url": "getting_started.html",
 "summary": ""
-}
-,
-
-
-
-{
-"title": "Getting Started",
-"tags": "",
-"keywords": "",
-"url": "gettingstarted.html",
-"summary": "Know the basics of installing and configuring Hygieia"
 }
 ,
 
@@ -459,6 +448,28 @@
 "tags": "",
 "keywords": "",
 "url": "xldeploy.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "index.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "",
+"tags": "",
+"keywords": "",
+"url": "hygieiagetting_started.html",
 "summary": ""
 }
 ,
