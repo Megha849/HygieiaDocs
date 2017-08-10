@@ -9,9 +9,6 @@ folder: hygieia
 
 ---
 
-![Image](/UI/src/assets/img/hygieia_b.png)
---
-
 ## Build Hygieia℠
 Needs Java 1.8.
 
@@ -76,7 +73,7 @@ To execute the above via a script in an automated fashion, use `mongosrc.js`:
 
 ## API Layer
 Please click on the link below to learn about how to build and run the API layer
-* [API](/api)
+* [API](/hygieia/API/api.md)
 
 ## Tool Collectors
 In general, all the collectors can be run using the following command
