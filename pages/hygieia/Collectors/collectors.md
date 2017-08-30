@@ -19,7 +19,7 @@ You can pick and choose which collectors are applicable for your DevOps toolset 
 Hygieia supports the following collectors Inventory:
 
 - **Build Collectors**
-  - [Bamboo](Build/bamboo)
+  - [Bamboo](Build/bamboo.md)
   - [Jenkins](jenkins.html)
   - [Jenkins Cucumber](cucumber.html)
   - [Sonar](sonar.html)
