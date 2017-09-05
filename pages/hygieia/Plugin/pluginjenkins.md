@@ -35,7 +35,8 @@ This plugin uses the Hygieia core package. The main project is JDK 1.8 compiled,
 1. Install the plugin by using "Advanced" option in Jenkins Plugin Management option to manually upload the file from local disk.
 2. Restart jenkins.
 3. Configure Global Hygieia Publisher in Jenkins Manage Jenkins/Configure System. Enter Hygieia API url such as `http://localhost:8090/api`. There is no API token implented at this time and it is work in progress.
-![NewLink]({{site.url}}{{site.baseurl}}/media/images/jenkins-global.png)
+{% include image.html file="jenkins-global.png" url="https://megha849.github.io" alt="Jekyll" caption="This is a sample caption" %"}
+![NewLink]({{site.url}}/media/images/jenkins-global.png)
 4. In Jenkins pipeline syntax page, Hygieia publish steps will show up:
 ![Image](https://megha849.github.io/HygieiaDocs/media/images/jenkins2.0-steplist.png)
 5. Select a step (say Hygieia Deploy Step ), fill in the required information and click "Generate Pipeline Script". The generated scirpt now can be copied to the pipeline script:
