@@ -25,8 +25,9 @@ For example, in the Windows command prompt, run the following command:
 
 Run the maven build to package the collector into an executable JAR file:
 
-<pre code=""> mvn install</pre>
-
+```
+mvn install
+```
 The output file `bamboo-collector.jar` is generated in the `bamboo\target` folder.
 
 *   **Step 3: Set Parameters in Application Properties File**
@@ -41,50 +42,53 @@ For information about sourcing the application properties file, refer to the [Sp
 
 To deploy the `bamboo-collector.jar` file, change directory to `bamboo\target`, and then execute the following from the command prompt:
 
-<pre code="">java -jar bamboo-collector.jar </pre>
+```
+java -jar bamboo-collector.jar 
+```
 
 If the `application.properties` file is not in the same location as the JAR file, then execute the following command:
 <pre code>java -jar bamboo-collector.jar --spring.config.name=bamboo --spring.config.location=[path to application.properties file]</pre code>
 
 ### Sample Application Properties File
 
+### Sample application.properties file
+
 ```properties
+# Database Name
+dbname=dashboard
 
-		# Database Name
-		dbname=dashboarddb
+# Database HostName - default is localhost
+dbhost=localhost
 
-		# Database HostName - default is localhost
-		dbhost=localhost
+# Database Port - default is 27017
+dbport=9999
 
-		# Database Port - default is 27017
-		dbport=9999
+# MongoDB replicaset
+dbreplicaset=[false if you are not using MongoDB replicaset]
+dbhostport=[host1:port1,host2:port2,host3:port3]
 
-		# MongoDB replicaset
-		dbreplicaset=[false if you are not using MongoDB replicaset]
-		dbhostport=[host1:port1,host2:port2,host3:port3]
+# Database Username - default is blank
+dbusername=db
 
-		# Database Username - default is blank
-		dbusername=dashboarduser
+# Database Password - default is blank
+dbpassword=dbpass
 
-		# Database Password - default is blank
-		dbpassword=dbpassword
+# Collector schedule (required)
+bamboo.cron=0 0/5 * * * *
 
-		# Collector schedule (required)
-		bamboo.cron=0 0/5 * * * *
+# Jenkins server (required) - Can provide multiple
+bamboo.servers[0]=http://bamboo.company.com
 
-		# Jenkins server (required) - Can provide multiple
-		bamboo.servers[0]=http://bamboo.company.com
+# If using username/token for api authentication
+#   (required for Cloudbees Jenkins Ops Center) see sample
+bamboo.servers[1]=http://username:token@bamboo.company.com
 
-		# If using username/token for api authentication
-		#   (required for Cloudbees Jenkins Ops Center) see sample
-		bamboo.servers[1]=http://username:token@bamboo.company.com
+# Another option: If using same username/password Jenkins auth,
+#   set username/apiKey to use HTTP Basic Auth (blank=no auth)
+bamboo.username=
+bamboo.apiKey=
 
-		# Another option: If using same username/password Jenkins auth,
-		#   set username/apiKey to use HTTP Basic Auth (blank=no auth)
-		bamboo.username=
-		bamboo.apiKey=
-
-		# Determines if build console log is collected - defaults to false
-		#   (Bamboo for some reason hasn't exposed it as an api...)
-		bamboo.saveLog=false
+# Determines if build console log is collected - defaults to false
+#   (Bamboo for some reason hasn't exposed it as an api...)
+bamboo.saveLog=false
 ```
