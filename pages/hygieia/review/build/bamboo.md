@@ -49,6 +49,7 @@ If the `application.properties` file is not in the same location as the JAR file
 ### Sample Application Properties File
 
 ```properties
+
 		# Database Name
 		dbname=dashboarddb
 
