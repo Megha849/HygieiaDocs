@@ -36,7 +36,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000feed.xml">
+<link rel="alternate" type="application/rss+xml" title="HygieiaDocs" href="http://localhost:4000feed.xml">
 
     <script>
         $(document).ready(function() {
@@ -398,63 +398,95 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h1 id="hygieia-scm-collectors--github">Hygieia SCM Collectors / Github</h1>
+  <p>Configure the GitHub Collector to display and monitor information on the Hygieia Dashboard, related to code contribution activites from the GitHub repository. Hygieia uses Spring Boot to package the collector as an executable jar file, with dependencies.</p>
 
-<p>Collect source code details from GitHub based on URL and branch</p>
+<h3 id="setup-instructions">Setup Instructions</h3>
 
-<p>This project uses Spring Boot to package the collector as an executable JAR with dependencies.</p>
+<p>To configure the Github Collector, execute the following steps:</p>
 
-<h2 id="building-and-deploying">Building and Deploying</h2>
+<ul>
+  <li><strong>Step 1: Change Directory</strong></li>
+</ul>
 
-<p>To package the collector into an executable JAR file, run:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>mvn install
-</code></pre>
-</div>
+<p>Change the current working directory to the <code class="highlighter-rouge">github</code> directory of your Hygieia source code installation.</p>
 
-<p>Copy this file to your server and launch it using:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>java -JAR github-collector.jar
-</code></pre>
-</div>
+<p>For example, in the Windows command prompt, run the following command:</p>
 
-<h2 id="applicationproperties">application.properties</h2>
+<pre code="">cd C:\Users\[usernname]\hygieia\collectors\scm\github</pre>
 
-<p>You will need to provide an <strong>application.properties</strong> file that contains information about how to connect to the Dashboard MongoDB database instance, as well as properties the Github collector requires. See the Spring Boot <a href="http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#boot-features-external-config-application-property-files">documentation</a> for information about sourcing this properties file.</p>
+<ul>
+  <li><strong>Step 2: Run Maven Build</strong></li>
+</ul>
 
-<h3 id="sample-applicationproperties-file">Sample application.properties file</h3>
+<p>Run the maven build to package the collector into an executable jar file:</p>
+
+<pre code=""> mvn install</pre>
+
+<p>The output file <code class="highlighter-rouge">github-collector.jar</code> is generated in the <code class="highlighter-rouge">github\target</code> folder.</p>
+
+<ul>
+  <li><strong>Step 3: Set Parameters in Application Properties File</strong></li>
+</ul>
+
+<p>Set the configurable parameters in the <code class="highlighter-rouge">application.properties</code> file to connect to the Dashboard MongoDB database instance, including properties required by the GitHub Collector.</p>
+
+<p>For information about sourcing the application properties file, refer to the <a href="http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#boot-features-external-config-application-property-files">Spring Boot Documentation</a>.</p>
+
+<p>To configure parameters for the GitHub Collector, refer to the sample <a href="#sample_application_properties_file">application.properties</a> file.</p>
+
+<ul>
+  <li><strong>Step 4: Deploy the Executable File</strong></li>
+</ul>
+
+<p>To deploy the <code class="highlighter-rouge">github-collector.jar</code> file, change directory to <code class="highlighter-rouge">github\target</code>, and then execute the following from the command prompt:</p>
+
+<pre code="">java -jar github-collector.jar </pre>
+
+<p>If the <code class="highlighter-rouge">application.properties</code> file is not in the same location as the jar file, then execute the following command:</p>
+
+<pre code="">java -jar github-collector.jar --spring.config.name=github --spring.config.location=[path to application.properties file]</pre>
+
+<h3 id="sample-application-properties-file">Sample Application Properties File</h3>
+
+<p>The sample <code class="highlighter-rouge">application.properties</code> file lists parameter values to configure the GitHub Collector. Set the parameters based on your environment setup.</p>
 
 <div class="language-properties highlighter-rouge"><pre class="highlight"><code><span class="c"># Database Name
-</span><span class="py">dbname</span><span class="p">=</span><span class="s">dashboard</span>
+</span>		<span class="py">dbname</span><span class="p">=</span><span class="s">dashboarddb</span>
 
-<span class="c"># Database HostName - default is localhost
-</span><span class="py">dbhost</span><span class="p">=</span><span class="s">localhost</span>
+		<span class="c"># Database HostName - default is localhost
+</span>		<span class="py">dbhost</span><span class="p">=</span><span class="s">localhost</span>
 
-<span class="c"># Database Port - default is 27017
-</span><span class="py">dbport</span><span class="p">=</span><span class="s">27017</span>
+		<span class="c"># Database Port - default is 27017
+</span>		<span class="py">dbport</span><span class="p">=</span><span class="s">27017</span>
 
-<span class="c"># MongoDB replicaset
-</span><span class="py">dbreplicaset</span><span class="p">=</span><span class="s">[false if you are not using MongoDB replicaset]</span>
-<span class="py">dbhostport</span><span class="p">=</span><span class="s">[host1:port1,host2:port2,host3:port3]</span>
+		<span class="c"># MongoDB replica set
+</span>		<span class="py">dbreplicaset</span><span class="p">=</span><span class="s">[false if you are not using MongoDB replicaset]</span>
+		<span class="py">dbhostport</span><span class="p">=</span><span class="s">[host1:port1,host2:port2,host3:port3]</span>
 
-<span class="c"># Database Username - default is blank
-</span><span class="py">dbusername</span><span class="p">=</span><span class="s">db</span>
+		<span class="c"># Database Username - default is blank
+</span>		<span class="py">dbusername</span><span class="p">=</span><span class="s">dashboarduser</span>
 
-<span class="c"># Database Password - default is blank
-</span><span class="py">dbpassword</span><span class="p">=</span><span class="s">dbpass</span>
+		<span class="c"># Database Password - default is blank
+</span>		<span class="py">dbpassword</span><span class="p">=</span><span class="s">dbpassword</span>
 
-<span class="c"># Logging File location
-</span><span class="py">logging.file</span><span class="p">=</span><span class="s">./logs/github.log</span>
+		<span class="c"># Logging File location
+</span>		<span class="py">logging.file</span><span class="p">=</span><span class="s">./logs/github.log</span>
 
-<span class="c"># Collector schedule (required)
-</span><span class="py">github.cron</span><span class="p">=</span><span class="s">0 0/5 * * * *</span>
+		<span class="c"># Collector schedule (required)
+</span>		<span class="py">github.cron</span><span class="p">=</span><span class="s">0 0/5 * * * *</span>
 
-<span class="py">github.host</span><span class="p">=</span><span class="s">github.com</span>
+		<span class="py">github.host</span><span class="p">=</span><span class="s">github.com</span>
 
-<span class="c"># Maximum number of days to go back in time when fetching commits
-</span><span class="py">github.commitThresholdDays</span><span class="p">=</span><span class="s">15</span>
+		<span class="c"># Maximum number of days to go back in time when fetching commits
+</span>		<span class="py">github.commitThresholdDays</span><span class="p">=</span><span class="s">15</span>
 
-<span class="c">#Optional: Error threshold count after which collector stops collecting for a collector item. Default is 2.
-</span><span class="py">github.errorThreshold</span><span class="p">=</span><span class="s">1</span>
-</code></pre>
+		<span class="c">#Optional: Error threshold count after which collector stops collecting for a collector item. Default is 2.
+</span>		<span class="py">github.errorThreshold</span><span class="p">=</span><span class="s">1</span>
+
+		<span class="py">github.key</span><span class="p">=</span><span class="s">&lt;your-generated-key&gt;</span>
+		<span class="c"># For information on on generating your github key, refer to:
+</span>		<span class="err">[Encryption</span> <span class="err">of</span> <span class="err">Private</span> <span class="err">Repos](</span><span class="c">#markdown-header-encryption-for-private-repos)
+</span></code></pre>
 </div>
 
 
@@ -472,7 +504,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                <!--&copy;2017 Capital One. All rights reserved. <br /> -->
- Site last generated: Aug 10, 2017 <br />
+ Site last generated: Sep 6, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

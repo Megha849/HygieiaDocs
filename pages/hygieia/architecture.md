@@ -8,6 +8,8 @@ permalink: architecture.html
 ---
 The following diagram gives an overview of Hygieia Architecture:
 
+![Architecture](.\media\images\architecture.png)
+
 ## Database Layer
 
 Hygieia uses MongoDB as the database for storage and retrieval of data.
