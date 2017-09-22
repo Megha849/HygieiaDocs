@@ -45,10 +45,6 @@ For information about sourcing the application properties file, refer to the [Sp
 
 To deploy the `sonar-collector.jar` file, change directory to `sonar\target`, and then execute the following from the command prompt:
 
-<pre code="">java -jar sonar-collector.jar </pre>
-
-If the `application.properties` file is not in the same location as the JAR file, then execute the following command:
-
 ```
 java -jar sonar-collector.jar --spring.config.name=sonar --spring.config.location=[path to application.properties file]
 ```
