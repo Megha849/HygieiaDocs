@@ -53,7 +53,7 @@ The sample `application.properties` file lists parameter values to configure the
 
 ```properties
 		# Database Name
-		dbname=dashboard
+		dbname=dashboarddb
 
 		# Database HostName - default is localhost
 		dbhost=localhost
@@ -66,10 +66,10 @@ The sample `application.properties` file lists parameter values to configure the
 		dbhostport=[host1:port1,host2:port2,host3:port3]
 
 		# Database Username - default is blank
-		dbusername=db
+		dbusername=dashboarduser
 
 		# Database Password - default is blank
-		dbpassword=dbpass
+		dbpassword=dbpassword
 
 		# Logging File location
 		logging.file=./logs/github.log
