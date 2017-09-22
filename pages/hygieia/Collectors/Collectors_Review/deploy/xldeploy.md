@@ -44,11 +44,6 @@ For information about sourcing the application properties file, refer to the [Sp
 To deploy the `xldeploy-collector.jar` file, change directory to `xldeploy\target`, and then execute the following from the command prompt:
 
 ```bash
-java -jar xldeploy-collector.jar 
-```
-
-If the `application.properties` file is not in the same location as the JAR file, then execute the following command:
-```bash
 java -jar xldeploy-collector.jar --spring.config.name=xldeploy --spring.config.location=[path to application.properties file]
 ```
 

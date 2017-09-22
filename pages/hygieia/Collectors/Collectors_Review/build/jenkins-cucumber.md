@@ -58,7 +58,6 @@ root_dir/
 To set up the Jenkins job, ensure the correct directory structure is established, and then once the build is complete, archive your root directory. 
 To archive your root directory, select the Post-build action as 'Archive the artifacts', and then set the files to archive them to the root of your directory tree.
 
-
 ### Setup Instructions
 
 To configure the Jenkins-Cucumber Collector, execute the following steps:
@@ -99,12 +98,7 @@ For information about sourcing the application properties file, refer to the [Sp
 To deploy the `jenkins-cucumber.jar` file, change directory to `jenkins-cucumber\target`, and then execute the following from the command prompt:
 
 ```bash
-java -jar jenkins-cucumber-test-collector.jar
-```
-
-If the `application.properties` file is not in the same location as the JAR file, then execute the following command:
-```bash
-java -jar jenkins-cucumber-test-collector.jar --spring.config.name=jenkins-cucumber-test-collector --spring.config.location=[path to application.properties file]
+java -jar jenkins-cucumber-test-collector.jar --spring.config.name=jenkins-cucumber --spring.config.location=[path to application.properties file]
 ```
 
 ### Sample Application Properties File

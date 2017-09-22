@@ -51,11 +51,6 @@ For information about sourcing the application properties file, refer to the [Sp
 To deploy the `jenkins-codequality.jar` file, change directory to `jenkins-codequality\target`, and then execute the following from the command prompt:
 
 ```bash
-java -jar jenkins-codequality.jar
-```
-
-If the `application.properties` file is not in the same location as the JAR file, then execute the following command:
-```bash
 java -jar jenkins-codequality.jar --spring.config.name=jenkins-codequality --spring.config.location=[path to application.properties file]
 ```
 

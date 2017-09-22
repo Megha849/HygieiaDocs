@@ -44,12 +44,6 @@ For information about sourcing the application properties file, refer to the [Sp
 
 To deploy the `hudson-collector.jar` file, change directory to `jenkins\target`, and then execute the following from the command prompt:
 
-```bash
-java -JAR hudson-collector.jar
-```
-
-If the `application.properties` file is not in the same location as the JAR file, then execute the following command:
-
 ```
 java -jar jenkins-collector.jar --spring.config.name=jenkins --spring.config.location=[path to application.properties file]
 ```

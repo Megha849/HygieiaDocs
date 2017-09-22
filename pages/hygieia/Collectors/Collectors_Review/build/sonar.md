@@ -50,7 +50,7 @@ To deploy the `sonar-collector.jar` file, change directory to `sonar\target`, an
 If the `application.properties` file is not in the same location as the JAR file, then execute the following command:
 
 ```
-java -jar bitbucket-collector.jar --spring.config.name=bitbucket --spring.config.location=[path to application.properties file]
+java -jar sonar-collector.jar --spring.config.name=sonar --spring.config.location=[path to application.properties file]
 ```
 
 ### Sample Application Properties File

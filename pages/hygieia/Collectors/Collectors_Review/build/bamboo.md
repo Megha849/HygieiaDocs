@@ -46,11 +46,6 @@ For information about sourcing the application properties file, refer to the [Sp
 To deploy the `bamboo-collector.jar` file, change directory to `bamboo\target`, and then execute the following from the command prompt:
 
 ```
-java -jar bamboo-collector.jar 
-```
-
-If the `application.properties` file is not in the same location as the JAR file, then execute the following command:
-```
 java -jar bamboo-collector.jar --spring.config.name=bamboo --spring.config.location=[path to application.properties file]
 ```
 

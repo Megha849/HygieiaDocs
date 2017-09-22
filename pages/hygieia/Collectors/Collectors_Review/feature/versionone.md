@@ -21,7 +21,7 @@ Change the current working directory to the `VersionOne` directory of your Hygie
 For example, in the Windows command prompt, run the following command:
 
 ```
-cd C:\Users\[username]\hygieia\collectors\scm\VersionOne
+cd C:\Users\[username]\hygieia\collectors\scm\versionone
 ```
 
 *   **Step 2: Run Maven Build**
@@ -30,7 +30,7 @@ Run the maven build to package the collector into an executable JAR file:
 
 <pre code=""> mvn install</pre>
 
-The output file `VersionOne-collector.jar` is generated in the `VersionOne\target` folder.
+The output file `versionone-feature-collector.jar` is generated in the `versionone\target` folder.
 
 *   **Step 3: Set Parameters in Application Properties File**
 
@@ -42,7 +42,7 @@ For information about sourcing the application properties file, refer to the [Sp
 
 *   **Step 4: Deploy the Executable File**
 
-To deploy the `VersionOne-collector.jar` file, change directory to `VersionOne\target`, and then execute the following from the command prompt:
+To deploy the `versionone-feature-collector.jar` file, change directory to `versionone\target`, and then execute the following from the command prompt:
 
 ```bash
 java -jar versionone-feature-collector.jar --spring.config.name=gitlab --spring.config.location=[path to application.properties file]

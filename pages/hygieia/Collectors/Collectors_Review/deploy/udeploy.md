@@ -44,11 +44,6 @@ For information about sourcing the application properties file, refer to the [Sp
 To deploy the `udeploy-collector.jar` file, change directory to `udeploy\target`, and then execute the following from the command prompt:
 
 ```bash
-java -jar udeploy-collector.jar 
-```
-
-If the `application.properties` file is not in the same location as the JAR file, then execute the following command:
-```bash
 java -jar udeploy-collector.jar --spring.config.name=udeploy --spring.config.location=[path to application.properties file]
 ```
 

@@ -45,7 +45,7 @@ For information about sourcing the application properties file, refer to the [Sp
 To deploy the `jira-feature-collector.jar` file, change directory to `jira\target`, and then execute the following from the command prompt:
 
 ```bash
-java -jar JIRA-collector.jar --spring.config.name=gitlab --spring.config.location=[path to application.properties file]
+java -jar jira-collector.jar --spring.config.name=feature --spring.config.location=[path to application.properties file]
 ```
 
 ### Sample Application Properties File
