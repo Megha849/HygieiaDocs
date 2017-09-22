@@ -50,7 +50,7 @@ For information about sourcing the application properties file, refer to the [Sp
 To deploy the `gitlab-feature-collector.jar` file, change directory to `gitlab-feature\target`, and then execute the following from the command prompt:
 
 ```bash
-java -jar gitlab-feature-collector.jar --spring.config.name=gitlab --spring.config.location=[path to application.properties file]
+java -jar gitlab-feature-collector.jar --spring.config.name=feature --spring.config.location=[path to application.properties file]
 ```
 
 ### Sample Application Properties File
