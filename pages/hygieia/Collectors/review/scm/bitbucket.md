@@ -108,4 +108,4 @@ The sample `application.properties` file lists parameters with sample values to 
 		
 		bitbucket.key=<your-generated-key>
 ```
-[Encryption of Private Repos](#markdown-header-encryption-for-private-repos)
+[Encryption of Private Repos](#encryption-for-private-repos)
