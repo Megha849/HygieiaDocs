@@ -105,6 +105,8 @@ The sample `application.properties` file lists parameters with sample values to 
 		
 		# Bitbucket key for private repos
 		# For information on generating your bitbucket key, refer to:
-		[Encryption of Private Repos](#markdown-header-encryption-for-private-repos)
+		
 		bitbucket.key=<your-generated-key>
 ```
+**Note**: For information on generating your Bitbucket key, refer to [Encryption of Private Repos](https://github.com/capitalone/Hygieia/blob/gh-pages/pages/hygieia/UI/ui.md#encryption-for-private-repos).
+
