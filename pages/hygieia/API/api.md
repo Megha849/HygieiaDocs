@@ -165,16 +165,13 @@ To run the API from docker, execute the following command from the command promp
 ```
 docker run -t -p 8080:8080 --link mongodb:mongo -v ./logs:/hygieia/logs -i hygieia-api:latest
 ```
+To verify API access from the web browser, take the port mapping and the IP for your docker-machine <env> ip and then verify using url: http://<docker-machine env ip>:<docker port for hygieia_api>/api/dashboard
 
 To list the running containers in the local repository, execute the following command:
 
 ```bash
 docker ps
 ```
-
-### API Access
-
-Take the port mapping and the IP for your docker-machine <env> ip and verify by http://<docker-machine env ip>:<docker port for hygieia_api>/api/dashboard
 
 ### Secure APIs Basic Authentication
 
