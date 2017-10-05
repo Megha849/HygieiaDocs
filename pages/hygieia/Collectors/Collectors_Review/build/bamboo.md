@@ -77,16 +77,16 @@ java -jar bamboo-collector.jar --spring.config.name=bamboo --spring.config.locat
 		# Jenkins server (required) - Can provide multiple
 		bamboo.servers[0]=http://bamboo.company.com
 
-		# If using username/token for api authentication
-		#   (required for Cloudbees Jenkins Ops Center) see sample
+		# If using username/token for API authentication
+		# (required for Cloudbees Jenkins Ops Center) see sample
 		bamboo.servers[1]=http://username:token@bamboo.company.com
 
 		# Another option: If using same username/password Jenkins auth,
-		#   set username/apiKey to use HTTP Basic Auth (blank=no auth)
+		# set username/apiKey to use HTTP Basic Auth (blank=no auth)
 		bamboo.username=
 		bamboo.apiKey=
 
 		# Determines if build console log is collected - defaults to false
-		#   (Bamboo for some reason hasn't exposed it as an api...)
+		# (Bamboo for some reason has not exposed it as an API)
 		bamboo.saveLog=false
 ```

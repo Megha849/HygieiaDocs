@@ -27,7 +27,9 @@ cd C:\Users\[usernname]\hygieia\collectors\scm\xldeploy
 
 Run the maven build to package the collector into an executable JAR file:
 
-<pre code=""> mvn install</pre>
+```bash
+mvn install
+```
 
 The output file `xldeploy-collector.jar` is generated in the `xldeploy\target` folder.
 

@@ -7,11 +7,11 @@ sidebar: hygieia_sidebar
 permalink: feature-gitlab.html
 ---
 
-Configure the Gitlab Feature Collector to display and monitor information (related to features/issues) on the Hygieia Dashboard, from Gitlab issue boards. Issue boards were introuduced to Gitlab in version 8.11, so you must be on this version of Gitlab or later to take advantage of this functionality.  
+Configure the Gitlab Feature Collector to display and monitor information (related to features/issues) on the Hygieia Dashboard, from Gitlab issue boards. Issue boards were introduced to Gitlab in version 8.11, so you must be on this version of Gitlab or later to take advantage of this functionality.  
 
-This collector will retrieve all the issues for you project, and classify them based on your issue board(s). (Gitlab Enterprise Edition allows you to have multiple boards for a project). By default, Gitlab provides you with two columns on your board, 'Backlog', and 'Done', you can then customize the columns in between. The collector works by finding the 'lists' you have created for the board, and finding all the issues you have that belong to those lists, and classifying them as 'In Progress'. Any issues which are 'Closed' are classified as 'Done'.
+This collector retrieves all the issues for your project, and classifies them based on your issue board(s). (Gitlab Enterprise Edition allows you to have multiple boards for a project). By default, Gitlab provides you with two columns on your board, 'Backlog', and 'Done'; you can then customize the columns in between. The collector works by finding the 'lists' you have created for the board, finding all the issues you have that belong to those lists, and then classifying them as 'In Progress'. Any issues which are 'Closed' are classified as 'Done'.
 
-Hygieia's UI has two different ways of displaying issue boards, Kanban or Scrum.  The collector determines whether an issue is Kanban or Scrum based on Gitlab's Milestones.  If an issue is associated with a Milestone, and the Milestone also has an end date, the issue will be shown as Scrum, otherwise it will be displayed as Kanban. The reason for this is that Scrum has set deadlines, which we are using Milestones with deadlines to represent. Kanban on the other hand is just a backlog organized by priority with no end date.  
+Hygieia's UI has two different ways of displaying issue boards, Kanban or Scrum.  The collector determines whether an issue is Kanban or Scrum based on Gitlab's Milestones. If an issue is associated with a Milestone, and the Milestone also has an end date, then the issue is shown as Scrum, otherwise it is displayed as Kanban. The reason for this is that Scrum has set deadlines, which is represented using Milestones with deadlines. Kanban is just a backlog organized by priority with no end date.  
 
 Hygieia uses Spring Boot to package the collector as an executable JAR file with dependencies.
 
@@ -25,7 +25,7 @@ Change the current working directory to the `gitlab-feature` directory of your H
 
 For example, in the Windows command prompt, run the following command:
 
-```
+```bash
 cd C:\Users\[username]\hygieia\collectors\scm\gitlab-feature
 ```
 
@@ -33,7 +33,9 @@ cd C:\Users\[username]\hygieia\collectors\scm\gitlab-feature
 
 Run the maven build to package the collector into an executable JAR file:
 
-<pre code=""> mvn install</pre>
+```bash
+mvn install
+```
 
 The output file `gitlab-feature-collector.jar` is generated in the `gitlab-feature\target` folder.
 
@@ -83,22 +85,22 @@ The sample `application.properties` file lists parameters with sample values to 
 		#Collector schedule (required)
 		gitlab.cron=0 0/1 * * * *
 
-		#Gitlab host (optional, defaults to "gitlab.com")
+		#Gitlab host (optional, defaults to 'gitlab.com')
 		gitlab.host=gitlab.com
 
-		#Gitlab protocol (optional, defaults to "http")
+		#Gitlab protocol (optional, defaults to 'http')
 		gitlab.protocol=http
 
 		#Gitlab port (optional, defaults to protocol default port)
 		gitlab.port=80
 
-		#Gitlab path (optional, if your instance of gitlab requires a path)
+		#Gitlab path (optional, if your instance of Gitlab requires a path)
 		gitlab.path=/gitlab/resides/here
 		  
 		#Gitlab API Token (required, collector will have permission of user associated to the token)
 		#If token is from admin account, will be able to view all teams, and can collect all issues
-		#If token is from standard user, will show only teams that user is apart of, and can only collect issues that user could view
-		#We recommend creating a Gitlab account for the collector, using it's Access Token, and adding that user to teams you want to see issues for
+		#If token is from standard user, will show only teams that user is a part of, and can only collect issues that user could view
+		#It is recommended to create a Gitlab account for the collector, using its Access Token, and adding that user to the teams you want to see issues for
 		gitlab.apiToken=
 
 		#Gitlab selfSignedCertificate (optional, defaults to false, set to true if your instance of gitlab is running on https without a trusted certificate

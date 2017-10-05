@@ -28,7 +28,9 @@ cd C:\Users\[username]\hygieia\collectors\scm\versionone
 
 Run the maven build to package the collector into an executable JAR file:
 
-<pre code=""> mvn install</pre>
+```bash
+mvn install
+```
 
 The output file `versionone-feature-collector.jar` is generated in the `versionone\target` folder.
 
@@ -87,9 +89,9 @@ The sample `application.properties` file lists parameters with sample values to 
 
 		#############################################################################
 		# Maximum Kanban iteration length allowed for a sprint start/end date before
-		# being converted a Kanban generic type iteration.  e.g., If you want anything
-		# longer than a 3 week sprint to be considered as Kanban in the Feature Widget,
-		# change this value to say: 36.  Default value is 28 days.
+		# being converted a Kanban generic type iteration.  For example, if you want anything
+		# longer than a 3-week sprint to be considered as Kanban in the Feature Widget,
+		# change this value to, for example, 36.  Default value is 28 days.
 		#
 		# Note:  This field otherwise does NOT need to be included, and is commented out
 		#############################################################################

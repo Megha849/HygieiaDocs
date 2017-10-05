@@ -6,13 +6,13 @@ summary:
 sidebar: hygieia_sidebar
 permalink: github.html
 ---
-Configure the GitHub Collector to display and monitor information (related to code contribution activites) on the Hygieia Dashboard, from the GitHub repository. Collect source code details from GitHub based on the repository URL and Branch for which you are configuring the collector. 
+Configure the GitHub Collector to display and monitor information (related to code contribution activities) on the Hygieia Dashboard, from the GitHub repository. Collect source code details from GitHub based on the repository URL and Branch for which you are configuring the collector. 
 
 Hygieia uses Spring Boot to package the collector as an executable JAR file with dependencies.
 
 ### Setup Instructions
 
-To configure the Github Collector, execute the following steps:
+To configure the GitHub Collector, execute the following steps:
 
 *   **Step 1: Change Directory**
 
@@ -20,13 +20,17 @@ Change the current working directory to the `github` directory of your Hygieia s
 
 For example, in the Windows command prompt, run the following command:
 
-<pre code="">cd C:\Users\[username]\hygieia\collectors\scm\github</pre>
+```bash
+cd C:\Users\[username]\hygieia\collectors\scm\github
+```
 
 *   **Step 2: Run Maven Build**
 
 Run the maven build to package the collector into an executable jar file:
 
-<pre code=""> mvn install</pre>
+```bash
+mvn install
+```
 
 The output file `github-collector.jar` is generated in the `github\target` folder.
 
@@ -45,7 +49,6 @@ To deploy the `github-collector.jar` file, change directory to `github\target`, 
 ```
 java -jar github-collector.jar --spring.config.name=github --spring.config.location=[path to application.properties file]
 ```
-
 
 ### Sample Application Properties File
 
@@ -79,14 +82,13 @@ The sample `application.properties` file lists parameter values to configure the
 
 		github.host=github.com
 
-		# Maximum number of days to go back in time when fetching commits
+		# Maximum number of previous days from current date, when fetching commits
 		github.commitThresholdDays=15
 
-		#Optional: Error threshold count after which collector stops collecting for a collector item. Default is 2.
+		# Optional: Error threshold count after which the collector stops collecting for a collector item. Default is 2.
 		github.errorThreshold=1
 		
 		# GitHub key for private repos
-		# For information on generating your github key, refer to:
-		[Encryption of Private Repos](#markdown-header-encryption-for-private-repos)
 		github.key=<your-generated-key>
 ```
+**Note**: For information on generating your GitHub key for private repos, refer to [Encryption of Private Repos](https://github.com/capitalone/Hygieia/blob/gh-pages/pages/hygieia/UI/ui.md#encryption-for-private-repos).

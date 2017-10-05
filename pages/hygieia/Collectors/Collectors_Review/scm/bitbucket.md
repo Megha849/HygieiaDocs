@@ -7,7 +7,7 @@ sidebar: hygieia_sidebar
 permalink: bitbucket.html
 ---
 
-Configure the Bitbucket Collector to display and monitor information (related to code contribution activites) on the Hygieia Dashboard, from the Bitbucket repository. Collect source code details from Bitbucket based on the repository URL and Branch for which you are configuring the collector. Bitbucket Collector provides implementations for both Bitbucket Cloud (formerly known as Bitbucket) and Bitbucket Server (formerly known as Stash).
+Configure the Bitbucket Collector to display and monitor information (related to code contribution activities) on the Hygieia Dashboard, from the Bitbucket repository. Collect source code details from Bitbucket based on the repository URL and Branch for which you are configuring the collector. Bitbucket Collector provides implementations for both Bitbucket Cloud (formerly known as Bitbucket) and Bitbucket Server (formerly known as Stash).
 
 Hygieia uses Spring Boot to package the collector as an executable JAR file with dependencies.
 
@@ -29,7 +29,9 @@ cd C:\Users\[username]\hygieia\collectors\scm\bitbucket
 
 Run the maven build to package the collector into an executable JAR file:
 
-<pre code=""> mvn install</pre>
+```bash
+mvn install
+```
 
 The output file `bitbucket-collector.jar` is generated in the `bitbucket\target` folder.
 
@@ -99,7 +101,6 @@ The sample `application.properties` file lists parameters with sample values to 
 		git.product=server
 		
 		# Bitbucket key for private repos
-		# For information on generating your bitbucket key, refer to:
-		[Encryption of Private Repos](#markdown-header-encryption-for-private-repos)
 		bitbucket.key=<your-generated-key>
 ```
+**Note**: For information on generating your Bitbucket key for private repos, refer to [Encryption for Private Repos](https://github.com/capitalone/Hygieia/blob/gh-pages/pages/hygieia/UI/ui.md#encryption-for-private-repos).

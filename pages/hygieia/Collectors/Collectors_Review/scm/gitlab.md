@@ -6,7 +6,7 @@ summary:
 sidebar: hygieia_sidebar
 permalink: gitlab.html
 ---
-Configure the Gitlab Collector to display and monitor information (related to code contribution activites) on the Hygieia Dashboard, from the Gitlab repository. Collect source code details from Gitlab based on the repository URL.
+Configure the Gitlab Collector to display and monitor information (related to code contribution activities) on the Hygieia Dashboard, from the Gitlab repository. Collect source code details from Gitlab based on the repository URL.
 
 This project uses Spring Boot to package the collector as an executable JAR file with dependencies.
 
@@ -95,15 +95,13 @@ The sample `application.properties` file lists parameter values to configure the
 		#If your instance of Gitlab is using a self-signed certificate, set to true, default is false
 		gitlab.selfSignedCertificate=false
 
-		#Gitlab API Token (required, user token the collector will use by default, can be overriden on a per repo basis from the UI. API token provided by Gitlab)
+		#Gitlab API Token (required, user token the collector will use by default, can be overridden on a per repo basis from the UI. API token provided by Gitlab)
 		gitlab.apiToken=
 
-		#Maximum number of days to go back in time when fetching commits
+		#Maximum number of previous days from current date, when fetching commits
 		gitlab.commitThresholdDays=15
 		
 		# Gitlab key for private repos
-		# For information on generating your gitlab key, refer to:
-		[Encryption of Private Repos](#markdown-header-encryption-for-private-repos)
 		gitlab.key=<your-generated-key>
 ```
-
+**Note**: For information on generating your Gitlab key for private repos, refer to [Encryption of Private Repos](https://github.com/capitalone/Hygieia/blob/gh-pages/pages/hygieia/UI/ui.md#encryption-for-private-repos).

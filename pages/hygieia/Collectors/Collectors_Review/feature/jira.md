@@ -20,7 +20,7 @@ Change the current working directory to the `jira` directory of your Hygieia sou
 
 For example, in the Windows command prompt, run the following command:
 
-```
+```bash
 cd C:\Users\[username]\hygieia\collectors\scm\jira
 ```
 
@@ -28,9 +28,11 @@ cd C:\Users\[username]\hygieia\collectors\scm\jira
 
 Run the maven build to package the collector into an executable JAR file:
 
-<pre code=""> mvn install</pre>
+```bash
+mvn install
+```
 
-The output file `JIRA-collector.jar` is generated in the `jira\target` folder.
+The output file `jira-feature-collector.jar` is generated in the `jira\target` folder.
 
 *   **Step 3: Set Parameters in Application Properties File**
 
@@ -186,11 +188,11 @@ Verify your JIRA collector configuration. Verify that the JIRA collector is pull
 Verify your JIRA collector configuration. Verify that the JIRA collector is pulling in data by observing the logs. Connect to the mongo database using a tool such as RoboMongo and check that the 'feature' collection has data. Check that features associated to an active sprint have the sEstimate (sEstimateTime for hours) field populated.
 
 ##### My JIRA widget only shows kanban sprints
-In order to show scrum sprints there must exist stories with sprints attached to them that are active and have a recent start date. You can verify that this information is being pulled by either hitting the rest API or looking into the mongo database in the feature collection.
+To show scrum sprints, there must exist stories with sprints attached to them that are active and have a recent start date. You can verify that this information is being pulled by either hitting the rest API or checking the mongo database in the feature collection.
 
 ##### ERROR c.c.d.client.DefaultJiraClient - No result was available from JIRA unexpectedly - defaulting to blank response. The reason for this fault is the following:RestClientException{statusCode=Optional.of(403), errorCollections=[]}
 This may happen if you have had too many failed login attempts and a CAPTCHA guard has been triggered. Try logging in to JIRA with a browser successfully to remove the CAPTCHA guard. Verify that the JIRA credentials are correct.
 
 ##### My issue is not listed or has not been resolved
-Search active and closed issues on github for 'jira'. Chances are your configuration is wrong and someone else has struggled through fixing it in another issue. Please refrain from commenting on closed issues. Github link: https://github.com/capitalone/Hygieia/issues?q=jira
+Search active and closed issues on GitHub for 'jira'. Chances are your configuration is wrong and someone else has struggled through fixing it in another issue. Please refrain from commenting on closed issues. Github link: https://github.com/capitalone/Hygieia/issues?q=jira
 

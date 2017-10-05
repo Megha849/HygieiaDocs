@@ -27,7 +27,9 @@ cd C:\Users\[usernname]\hygieia\collectors\scm\udeploy
 
 Run the maven build to package the collector into an executable JAR file:
 
-<pre code=""> mvn install</pre>
+```
+mvn install
+```
 
 The output file `udeploy-collector.jar` is generated in the `udeploy\target` folder.
 
@@ -75,15 +77,15 @@ java -jar udeploy-collector.jar --spring.config.name=udeploy --spring.config.loc
 		# Collector schedule (required)
 		udeploy.cron=0 0/5 * * * *
 
-		# UDeploy server (required) - Can provide multiple
+		# uDeploy server (required) - Can provide multiple
 		udeploy.servers[0]=http://udeploy.company.com
 
-		# UDeploy user name (required)
+		# uDeploy user name (required)
 		udeploy.username=bobama
 
-		# UDeploy password (required)
+		# uDeploy password (required)
 		udeploy.password=s3cr3t
 
-		# UDeploy token can be used instead of username and password
+		# uDeploy token can be used instead of username and password
 		udeploy.token=theudeploytoken
 ```

@@ -39,7 +39,7 @@ For example:
 cucumber features/my_feature.feature --format json --out cucumber.json
 ```
 
-After the outfile file,`cucumber.json` is generated during a test run, the Collector depends on a root directory to search for all output files included in the results. If multiple projects are being executed or multiple cucumber commands are being called, then the directory structure created provides the 'suite' names for the test result report. Following is an example folder structure:
+After the output file,`cucumber.json` is generated during a test run, the Collector depends on a root directory to search for all output files included in the results. If multiple projects are being executed or multiple cucumber commands are being called, then the directory structure created provides the 'suite' names for the test result report. Following is an example folder structure:
 
 ```
 root_dir/
@@ -68,7 +68,9 @@ Change the current working directory to the `jenkins-cucumber` directory of your
 
 For example, in the Windows command prompt, run the following command:
 
-<pre code="">cd C:\Users\[usernname]\hygieia\collectors\scm\jenkins-cucumber</pre>
+```
+cd C:\Users\[usernname]\hygieia\collectors\scm\jenkins-cucumber
+```
 
 *   **Step 2: Run Maven Build**
 
@@ -81,7 +83,8 @@ Run the maven build to package the collector into an executable JAR file:
 The output file `jenkins-cucumber.jar` is generated in the `jenkins-cucumber\target` folder.
 
 Once the build is run, the code quality artefacts(for example, test.exec) should be available at the following path:
-```
+
+```bash
 C:\path\to\junit\findbugs\pmd\checkstyle\jacoco artefacts
 ```
 
@@ -130,11 +133,11 @@ java -jar jenkins-cucumber-test-collector.jar --spring.config.name=jenkins-cucum
 		#Jenkins server (required) - Can provide multiple
 		jenkins-cucumber.servers[0]=
 
-		#pattern to find cucubmer reports
+		#Pattern to find cucumber reports
 		jenkins-cucumber.cucumberJsonRegex=${JENKINS_CUCUMBER_JSON_FILENAME:-cucumber.json}
 
 		#Another option: If using same username/password Jenkins auth - set username/apiKey to use HTTP Basic Auth (blank=no auth)
 		jenkins-cucumber.username=
 		jenkins-cucumber.apiKey=
-		```
+```
 

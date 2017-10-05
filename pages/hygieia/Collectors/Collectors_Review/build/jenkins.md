@@ -82,12 +82,12 @@ java -jar jenkins-collector.jar --spring.config.name=jenkins --spring.config.loc
 		# Jenkins server (required) - Can provide multiple
 		jenkins.servers[0]=http://jenkins.company.com
 
-		# If using username/token for api authentication
+		# If using username/token for API authentication
 		# (required for Cloudbees Jenkins Ops Center) For example,
 		jenkins.servers[1]=http://username:token@jenkins.company.com
 
 		# Another option: If using same username/password Jenkins auth,
-		#   set username/apiKey to use HTTP Basic Auth (blank=no auth)
+		# set username/apiKey to use HTTP Basic Auth (blank=no auth)
 		jenkins.usernames[0]=
 		jenkins.apiKeys[0]=
 

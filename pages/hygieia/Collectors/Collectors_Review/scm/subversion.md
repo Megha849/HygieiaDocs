@@ -6,7 +6,7 @@ summary:
 sidebar: hygieia_sidebar
 permalink: subversion.html
 ---
-Configure the Subversion Collector to display and monitor information (related to code contribution activites) on the Hygieia Dashboard, from the Subversion repository. Hygieia uses Spring Boot to package the collector as an executable JAR file with dependencies.
+Configure the Subversion Collector to display and monitor information (related to code contribution activities) on the Hygieia Dashboard, from the Subversion repository. Hygieia uses Spring Boot to package the collector as an executable JAR file with dependencies.
 
 ### Setup Instructions
 
@@ -50,7 +50,7 @@ java -jar subversion-collector.jar --spring.config.name=subversion --spring.conf
 
 ### Sample Application Properties File
 
-The sample `application.properties` file lists parameter values to configure the Subversion Collector. Set the parapeters based on your environment setup.
+The sample `application.properties` file lists parameter values to configure the Subversion Collector. Set the parameters based on your environment setup.
 
 ```properties
 		# Database Name
@@ -83,6 +83,6 @@ The sample `application.properties` file lists parameter values to configure the
 		subversion.password=bar
 		subversion.host=my.subversion.com
 
-		# Maximum number of days to go back in time when fetching commits
+		# Maximum number of previous days from current date, when fetching commits
 		subversion.commitThresholdDays=15
 ```
