@@ -9,7 +9,7 @@ permalink: api.html
 [![Docker Stars](https://img.shields.io/docker/stars/capitalone/hygieia-api.svg)](https://hub.docker.com/r/capitalone/hygieia-api/)
 [![Docker Stars](https://img.shields.io/docker/pulls/capitalone/hygieia-api.svg)](https://hub.docker.com/r/capitalone/hygieia-api/)
 
-Hygieia API contains all common REST API services that work with the source system data (collected by service tasks). The Hygieia API layer is an abstraction of the local and source system data layer. All REST controllers should be generic to their purpose, and should not be specific to any given source system.
+Hygieia API layer contains all common REST API services that work with the source system data (collected by service tasks). The Hygieia API layer is an abstraction of the local and source system data layer. All REST controllers should be generic to their purpose, and should not be specific to any given source system.
 
 Hygieia uses Spring Boot to package the API as an executable JAR file with dependencies.
 
