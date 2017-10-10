@@ -15,7 +15,7 @@ Hygieia uses Spring Boot to package the API as an executable JAR file with depen
 
 ## Setup Instructions
 
-If you do not already have Hygieia installed, then you can download or clone Hygieia from the [GitHub repo](https://github.com/capitalone/Hygieia). For information on cloning a repository, see [GitHub Documentation](https://help.github.com/articles/cloning-a-repository/).
+If you do not already have Hygieia installed, you can download or clone Hygieia from the [GitHub repo](https://github.com/capitalone/Hygieia). For information on cloning a repository, see [GitHub Documentation](https://help.github.com/articles/cloning-a-repository/).
 
 To configure the Hygieia API layer, execute the following steps:
 
@@ -29,9 +29,9 @@ mvn install
 
 The output file `api.jar` is generated in the `\api\target` folder.
 
-*	**Step 2: Set parameters in the API Properties File**
+*	**Step 2: Set Parameters in the API Properties File**
 
-Set the configurable parameters in the `dashboard.properties` file to connect to the Dashboard MongoDB database instance, including properties required by the API module. To configure the parameters, refer to the the [API properties](#api-properties-file) file.
+Set the configurable parameters in the `dashboard.properties` file to connect to the Dashboard MongoDB database instance, including properties required by the API module. To configure the parameters, refer to the [API properties](#api-properties-file) file.
 
 For more information about the server configuration, see the Spring Boot [documentation](http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#boot-features-external-config-application-property-files).
 
@@ -40,12 +40,12 @@ For more information about the server configuration, see the Spring Boot [docume
 To run the executable file, change directory to 'api\target' and then execute the following command from the command prompt:
 
 ```bash
-java -jar api.jar --spring.config.location=dashboard.properties -Djasypt.encryptor.password=hygieiasecret
+java -jar api.jar --spring.config.location=C:\[path to]\Hygieia\api\dashboard.properties -Djasypt.encryptor.password=hygieiasecret
 ```
 
 Verify API access from the web browser using the url: http://localhost:8080/api/ping. 
 
-By default the server starts at port `8080` and uses the context path `/api`. You can configure these values in the `dashboard.properties` file for the following properties:
+By default, the server starts at port `8080` and uses the context path `\api`. You can configure these values in the `dashboard.properties` file for the following properties:
 
 ```properties
 server.contextPath=/api
@@ -78,13 +78,13 @@ The sample `dashboard.properties` file lists parameters with sample values to co
 		auth.expirationTime=[JWT expiration time in milliseconds]
 		auth.secret=[Secret Key used to validate the JWT tokens]
 		auth.authenticationProviders=[Authentication types you would like to enable, defaults to STANDARD, ex: STANDARD,LDAP]
-		auth.ldapServerUrl=[LDAP Server Url, including port of your LDAP server]
+		auth.ldapServerUrl=[LDAP Server URL, including port of your LDAP server]
 		auth.ldapUserDnPattern=[LDAP User Dn Pattern, where the username is replaced with '{0}']
 
-		# LDAP Server Url, including port of your LDAP server
+		# LDAP Server URL, including port of your LDAP server
 		auth.ldapServerUrl=[ldap://company.com:389]
 
-		# If using standard ldap
+		# If using standard LDAP
 		# LDAP User Dn Pattern, where the username is replaced with '{0}'
 		auth.ldapUserDnPattern=[uid={0},OU=Users,dc=your,dc=company,dc=com]
 
@@ -93,7 +93,7 @@ The sample `dashboard.properties` file lists parameters with sample values to co
 		auth.adDomain=[company.com]
 		# This will be your root dn
 		auth.adRootDn=[dc=your,dc=company,dc=com]
-		# This will be your active directory url (required for AD)
+		# This will be your active directory URL (required for AD)
 		auth.adUrl=[Need an example]
 
 		monitor.proxy.host=[hostname of proxy server]
@@ -103,7 +103,7 @@ The sample `dashboard.properties` file lists parameters with sample values to co
 		monitor.proxy.password=[proxy password]
 ```
 
-All the above values are optional. Even without the property file you must be able to run the api (assuming you have mongodb installed with no authorization).
+All the above values are optional. Even without the properties file you must be able to run the API (assuming you have MongoDB installed with no authorization).
 
 Note the following:
 
@@ -175,11 +175,11 @@ docker ps
 
 ### Secure APIs Basic Authentication
 
-1. From the admin menu, generate an 'apitoken' for an 'apiuser'.
+1. From the admin menu, generate an 'apiToken' for an 'apiUser'.
 
 2. Create a POST request with the following two headers and make a rest call for secured API.
 
-	- Add Authorization header
+	* Add Authorization header
 	
 ```properties
 String passwordIsAuthToken = "PasswordIsAuthToken:{\"apiKey\":\"" + <generated apitoken> + "\"}";
@@ -188,7 +188,7 @@ String authHeader = "apiToken " + new String(encodedAuth);
 Authorization: apiToken <authHeader>
 ```
 
-	- Add apiUser header
+	* Add apiUser header
 	
 ```
 apiUser <apiuser>
@@ -247,7 +247,7 @@ where,
 dbpassword - Property value being encrypted, and 
 hygieiasecret - the secret. 
 
-When you run the API, this secret has to be passed as a System property using `-Djasypt.encryptor.password=hygieiasecret` in order to decrypt the property.
+When you run the API, this secret has to be passed as a system property using `-Djasypt.encryptor.password=hygieiasecret` in order to decrypt the property.
 
 When using docker, pass the environment variable `docker run -t -p 8080:8080 -v ./logs:/hygieia/logs -e "SPRING_DATA_MONGODB_HOST=127.0.0.1" -e "JASYPT_ENCRYPTOR_PASSWORD=hygieiasecret" -i hygieia-api:latest`.
 
