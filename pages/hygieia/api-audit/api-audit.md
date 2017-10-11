@@ -60,18 +60,18 @@ To configure the Hygieia audit API layer, execute the following steps:
 The sample `api-audit.properties` file lists parameters with sample values to configure the audit API layer. Set the parameters based on your environment setup.
 
 ```properties
-		# api-audit.properties
-		dbname=dashboarddb
-		dbusername=dashboarduser[MogoDb Database Username, defaults to empty]
-		dbpassword=dbpassword[MongoDB Database Password, defaults to empty]
-		dbhost=[Host on which MongoDB is running, defaults to localhost]
-		dbport=[Port on which MongoDB is listening, defaults to 27017]
-		dbreplicaset=[False if you are not using MongoDB replicaset]
-		dbhostport=[host1:port1,host2:port2,host3:port3]
-		server.contextPath=[Web Context path, if any]
-		server.port=[Web server port - default is 8080]
-		logRequest=false
-		logSplunkRequest=false
+# api-audit.properties
+dbname=dashboarddb
+dbusername=dashboarduser[MogoDb Database Username, defaults to empty]
+dbpassword=dbpassword[MongoDB Database Password, defaults to empty]
+dbhost=[Host on which MongoDB is running, defaults to localhost]
+dbport=[Port on which MongoDB is listening, defaults to 27017]
+dbreplicaset=[False if you are not using MongoDB replicaset]
+dbhostport=[host1:port1,host2:port2,host3:port3]
+server.contextPath=[Web Context path, if any]
+server.port=[Web server port - default is 8080]
+logRequest=false
+logSplunkRequest=false
 ```
 
 All the above values are optional. Even without the properties file you must be able to run the API (assuming you have MongoDB installed with no authorization).

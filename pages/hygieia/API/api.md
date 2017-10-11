@@ -29,7 +29,7 @@ To configure the Hygieia API layer, execute the following steps:
 	mvn install
 	```
 
-	The output file `api.jar` is generated in the `\api\target` folder.
+The output file `api.jar` is generated in the `\api\target` folder.
 
 *	**Step 2: Set Parameters in the API Properties File**
 
@@ -60,49 +60,48 @@ To configure the Hygieia API layer, execute the following steps:
 The sample `dashboard.properties` file lists parameters with sample values to configure the API layer. Set the parameters based on your environment setup.
 
 ```properties
+# dashboard.properties
+dbname=dashboarddb
+dbusername=dashboarduser[MogoDB Database Username, defaults to empty]
+dbpassword=dbpassword[MongoDB Database Password, defaults to empty]
+dbhost=[Host on which MongoDB is running, defaults to localhost]
+dbport=[Port on which MongoDB is listening, defaults to 27017]
+dbreplicaset=[false if you are not using MongoDB replicaset]
+dbhostport=[host1:port1,host2:port2,host3:port3]
+server.contextPath=[Web Context path, if any]
+server.port=[Web server port - default is 8080]
+logRequest=false
+logSplunkRequest=false
+corsEnabled=false
+corsWhitelist=http://domain1.com:port,http://domain2.com:port
+version.number=@application.version.number@
 
-		# dashboard.properties
-		dbname=dashboarddb
-		dbusername=dashboarduser[MogoDB Database Username, defaults to empty]
-		dbpassword=dbpassword[MongoDB Database Password, defaults to empty]
-		dbhost=[Host on which MongoDB is running, defaults to localhost]
-		dbport=[Port on which MongoDB is listening, defaults to 27017]
-		dbreplicaset=[false if you are not using MongoDB replicaset]
-		dbhostport=[host1:port1,host2:port2,host3:port3]
-		server.contextPath=[Web Context path, if any]
-		server.port=[Web server port - default is 8080]
-		logRequest=false
-		logSplunkRequest=false
-		corsEnabled=false
-		corsWhitelist=http://domain1.com:port,http://domain2.com:port
-		version.number=@application.version.number@
+auth.expirationTime=[JWT expiration time in milliseconds]
+auth.secret=[Secret Key used to validate the JWT tokens]
+auth.authenticationProviders=[Authentication types you would like to enable, defaults to STANDARD, ex: STANDARD,LDAP]
+auth.ldapServerUrl=[LDAP Server URL, including port of your LDAP server]
+auth.ldapUserDnPattern=[LDAP User Dn Pattern, where the username is replaced with '{0}']
 
-		auth.expirationTime=[JWT expiration time in milliseconds]
-		auth.secret=[Secret Key used to validate the JWT tokens]
-		auth.authenticationProviders=[Authentication types you would like to enable, defaults to STANDARD, ex: STANDARD,LDAP]
-		auth.ldapServerUrl=[LDAP Server URL, including port of your LDAP server]
-		auth.ldapUserDnPattern=[LDAP User Dn Pattern, where the username is replaced with '{0}']
+# LDAP Server URL, including port of your LDAP server
+auth.ldapServerUrl=[ldap://company.com:389]
 
-		# LDAP Server URL, including port of your LDAP server
-		auth.ldapServerUrl=[ldap://company.com:389]
+# If using standard LDAP
+# LDAP User Dn Pattern, where the username is replaced with '{0}'
+auth.ldapUserDnPattern=[uid={0},OU=Users,dc=your,dc=company,dc=com]
 
-		# If using standard LDAP
-		# LDAP User Dn Pattern, where the username is replaced with '{0}'
-		auth.ldapUserDnPattern=[uid={0},OU=Users,dc=your,dc=company,dc=com]
+# If using ActiveDirectory
+# This will be the domain part of your userPrincipalName
+auth.adDomain=[company.com]
+# This will be your root dn
+auth.adRootDn=[dc=your,dc=company,dc=com]
+# This will be your active directory URL (required for AD)
+auth.adUrl=[Need an example]
 
-		# If using ActiveDirectory
-		# This will be the domain part of your userPrincipalName
-		auth.adDomain=[company.com]
-		# This will be your root dn
-		auth.adRootDn=[dc=your,dc=company,dc=com]
-		# This will be your active directory URL (required for AD)
-		auth.adUrl=[Need an example]
-
-		monitor.proxy.host=[hostname of proxy server]
-		monitor.proxy.type=[http|socks|direct]
-		monitor.proxy.port=[port enabled on proxy server]
-		monitor.proxy.username=[proxy username]
-		monitor.proxy.password=[proxy password]
+monitor.proxy.host=[hostname of proxy server]
+monitor.proxy.type=[http|socks|direct]
+monitor.proxy.port=[port enabled on proxy server]
+monitor.proxy.username=[proxy username]
+monitor.proxy.password=[proxy password]
 ```
 
 All the above values are optional. Even without the properties file you must be able to run the API (assuming you have MongoDB installed with no authorization).
