@@ -11,6 +11,8 @@ permalink: api.html
 
 Hygieia API layer contains all common REST API services that work with the source system data (collected by service tasks). The Hygieia API layer is an abstraction of the local and source system data layer. All REST controllers should be generic to their purpose, and should not be specific to any given source system.
 
+For detailed information on APIs, see the Swagger documentation. 
+
 Hygieia uses Spring Boot to package the API as an executable JAR file with dependencies.
 
 ## Setup Instructions
@@ -61,10 +63,10 @@ The sample `dashboard.properties` file lists parameters with sample values to co
 
 		# dashboard.properties
 		dbname=dashboarddb
-		dbusername=dashboarduser[MogoDb Database Username, defaults to empty]
-		dbpassword=dbpassword[MongoDb Database Password, defaults to empty]
-		dbhost=[Host on which MongoDb is running, defaults to localhost]
-		dbport=[Port on which MongoDb is listening, defaults to 27017]
+		dbusername=dashboarduser[MogoDB Database Username, defaults to empty]
+		dbpassword=dbpassword[MongoDB Database Password, defaults to empty]
+		dbhost=[Host on which MongoDB is running, defaults to localhost]
+		dbport=[Port on which MongoDB is listening, defaults to 27017]
 		dbreplicaset=[false if you are not using MongoDB replicaset]
 		dbhostport=[host1:port1,host2:port2,host3:port3]
 		server.contextPath=[Web Context path, if any]
@@ -107,7 +109,7 @@ All the above values are optional. Even without the properties file you must be 
 
 Note the following:
 
- * If the value of `dbusername` is empty, then system skips mongodb authorization.
+ * If the value of `dbusername` is empty, then system skips MongoDB authorization.
  * Expiration time is mandatory for users to see any content. If you do not specify the expiration time, then the token can be considered as permanently expired. Leaving this value blank will not terminate the application start up. However, users will not be able to see any content 
  * If the secret is left blank, a random key is generated. To allow multiple instances of the API to validate the same JWT token, provide the same key to each running instance of the API.  
  * If both LDAP parameters are not provided, then LDAP is not available as an authentication provider.
@@ -142,7 +144,7 @@ db.createUser({user: "dashoarduser", pwd: "dbpassword", roles: [{role: "readWrit
 
 # To execute from CLI:
 
-mongo 192.168.64.2/admin --eval 'db.getSiblingDB("dashboarduser").createUser({user: "dashboarduser", pwd: "dbpassword", roles: [{role: "readWrite", db: "dashboarddb"}]})'
+mongo 192.168.64.2/admin --eval 'db.getSiblingDB("dashboarddb").createUser({user: "dashboarduser", pwd: "dbpassword", roles: [{role: "readWrite", db: "dashboarddb"}]})'
 ```
 
 For more information on creating docker image for MongoDB, refer to the [Docker Hub Document](https://hub.docker.com/r/library/mongo/).
@@ -160,12 +162,12 @@ To define more properties, refer to the [Dockerfile](https://github.com/capitalo
 
 *	**Step 4: Run the API**
 
-To run the API from docker, execute the following command from the command prompt:
+To run the API from Docker, execute the following command from the command prompt:
 
 ```
 docker run -t -p 8080:8080 --link mongodb:mongo -v ./logs:/hygieia/logs -i hygieia-api:latest
 ```
-To verify API access from the web browser, take the port mapping and the IP for your docker-machine <env> ip and then verify using url: http://<docker-machine env ip>:<docker port for hygieia_api>/api/dashboard
+To verify API access from the web browser, take the port mapping and the IP for your docker-machine <env> ip and then verify using url: `http://<docker-machine env ip>:<docker port for hygieia_api>/api/dashboard`
 
 To list the running containers in the local repository, execute the following command:
 
