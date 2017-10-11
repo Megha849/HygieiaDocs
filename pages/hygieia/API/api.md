@@ -29,7 +29,7 @@ To configure the Hygieia API layer, execute the following steps:
 	mvn install
 	```
 
-The output file `api.jar` is generated in the `\api\target` folder.
+	The output file `api.jar` is generated in the `\api\target` folder.
 
 *	**Step 2: Set Parameters in the API Properties File**
 
