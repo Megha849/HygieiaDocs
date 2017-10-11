@@ -23,37 +23,37 @@ To configure the Hygieia API layer, execute the following steps:
 
 *	**Step 1: Run Maven Build**
 
-To package the API source code into an executable JAR file, run the maven build from the `\Hygieia` directory of your source code installation:
+	To package the API source code into an executable JAR file, run the maven build from the `\Hygieia` directory of your source code installation:
 
-```bash
-mvn install
-```
+	```bash
+	mvn install
+	```
 
 The output file `api.jar` is generated in the `\api\target` folder.
 
 *	**Step 2: Set Parameters in the API Properties File**
 
-Set the configurable parameters in the `dashboard.properties` file to connect to the Dashboard MongoDB database instance, including properties required by the API module. To configure the parameters, refer to the [API properties](#api-properties-file) file.
+	Set the configurable parameters in the `dashboard.properties` file to connect to the Dashboard MongoDB database instance, including properties required by the API module. To configure the parameters, refer to the [API properties](#api-properties-file) file.
 
-For more information about the server configuration, see the Spring Boot [documentation](http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#boot-features-external-config-application-property-files).
+	For more information about the server configuration, see the Spring Boot [documentation](http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#boot-features-external-config-application-property-files).
 
 *	**Step 3: Run the API**
 
-To run the executable file, change directory to 'api\target' and then execute the following command from the command prompt:
+	To run the executable file, change directory to 'api\target' and then execute the following command from the command prompt:
 
-```bash
-java -jar api.jar --spring.config.location=C:\[path to]\Hygieia\api\dashboard.properties -Djasypt.encryptor.password=hygieiasecret
-```
+	```bash
+	java -jar api.jar --spring.config.location=C:\[path to]\Hygieia\api\dashboard.properties -Djasypt.encryptor.password=hygieiasecret
+	```
 
-Verify API access from the web browser using the url: http://localhost:8080/api/ping. 
+	Verify API access from the web browser using the url: http://localhost:8080/api/ping. 
 
-By default, the server starts at port `8080` and uses the context path `\api`. You can configure these values in the `dashboard.properties` file for the following properties:
+	By default, the server starts at port `8080` and uses the context path `\api`. You can configure these values in the `dashboard.properties` file for the following properties:
 
-```properties
-server.contextPath=/api
-server.port=8080
-```
-**Note**: The 'jasypt.encryptor.password' system property is used to decrypt the database password. For more information, refer to [Encrypted Properties](#encrypted-properties).
+	```properties
+	server.contextPath=/api
+	server.port=8080
+	```
+	**Note**: The 'jasypt.encryptor.password' system property is used to decrypt the database password. For more information, refer to [Encrypted Properties](#encrypted-properties).
 
 ## API Properties File
 
@@ -121,59 +121,59 @@ To configure the Hygieia API layer, execute the following steps:
 
 *	**Step 1: Run Maven Build**
 
-To package the API source code into an executable JAR file, run the maven build from the `\Hygieia` directory of your source code installation:
+	To package the API source code into an executable JAR file, run the maven build from the `\Hygieia` directory of your source code installation:
 
-```bash
-mvn clean package -pl api docker:build
-```
+	```bash
+	mvn clean package -pl api docker:build
+	```
 *	**Step 2: Start MongoDB Docker Container**
 
-Execute the following commands to start MongoDB, switch to db dashbaord, and then add dashboard user:
+	Execute the following commands to start MongoDB, switch to db dashbaord, and then add dashboard user:
 
-``` bash
-docker run -d -p 27017:27017 --name mongodb -v ./mongo:/data/db mongo:latest  mongod --smallfiles
+	``` bash
+	docker run -d -p 27017:27017 --name mongodb -v ./mongo:/data/db mongo:latest  mongod --smallfiles
 
-# Connect to MongoDB
-docker exec -t -i mongodb bash
+	# Connect to MongoDB
+	docker exec -t -i mongodb bash
 
-# Switch to db dashbaord
-use dashboarddb
+	# Switch to db dashbaord
+	use dashboarddb
 
-# Create dashboard user
-db.createUser({user: "dashoarduser", pwd: "dbpassword", roles: [{role: "readWrite", db: "dashboarddb"}]})
+	# Create dashboard user
+	db.createUser({user: "dashoarduser", pwd: "dbpassword", roles: [{role: "readWrite", db: "dashboarddb"}]})
 
-# To execute from CLI:
+	# To execute from CLI:
 
-mongo 192.168.64.2/admin --eval 'db.getSiblingDB("dashboarddb").createUser({user: "dashboarduser", pwd: "dbpassword", roles: [{role: "readWrite", db: "dashboarddb"}]})'
-```
+	mongo 192.168.64.2/admin --eval 'db.getSiblingDB("dashboarddb").createUser({user: "dashboarduser", pwd: "dbpassword", roles: [{role: "readWrite", db: "dashboarddb"}]})'
+	```
 
-For more information on creating docker image for MongoDB, refer to the [Docker Hub Document](https://hub.docker.com/r/library/mongo/).
+	For more information on creating docker image for MongoDB, refer to the [Docker Hub Document](https://hub.docker.com/r/library/mongo/).
 
 *   **Step 3: Set Environment Variables**
 
-Specify the Environment Variables for dashboard properties:
+	Specify the Environment Variables for dashboard properties:
 
-```
-docker run -t -p 8080:8080 -v ./logs:/hygieia/logs -e "SPRING_DATA_MONGODB_HOST=127.0.0.1" -i hygieia-api:latest
-```
+	```
+	docker run -t -p 8080:8080 -v ./logs:/hygieia/logs -e "SPRING_DATA_MONGODB_HOST=127.0.0.1" -i hygieia-api:latest
+	```
 
-To define more properties, refer to the [Dockerfile](https://github.com/capitalone/Hygieia/blob/master/api/docker/Dockerfile).
+	To define more properties, refer to the [Dockerfile](https://github.com/capitalone/Hygieia/blob/master/api/docker/Dockerfile).
 
 
 *	**Step 4: Run the API**
 
-To run the API from Docker, execute the following command from the command prompt:
+	To run the API from Docker, execute the following command from the command prompt:
 
-```
-docker run -t -p 8080:8080 --link mongodb:mongo -v ./logs:/hygieia/logs -i hygieia-api:latest
-```
-To verify API access from the web browser, take the port mapping and the IP for your docker-machine <env> ip and then verify using url: `http://<docker-machine env ip>:<docker port for hygieia_api>/api/dashboard`
+	```
+	docker run -t -p 8080:8080 --link mongodb:mongo -v ./logs:/hygieia/logs -i hygieia-api:latest
+	```
+	To verify API access from the web browser, take the port mapping and the IP for your docker-machine <env> ip and then verify using url: `http://<docker-machine env ip>:<docker port for hygieia_api>/api/dashboard`
 
-To list the running containers in the local repository, execute the following command:
+	To list the running containers in the local repository, execute the following command:
 
-```bash
-docker ps
-```
+	```bash
+	docker ps
+	```
 
 ### Secure APIs Basic Authentication
 
@@ -181,20 +181,20 @@ docker ps
 
 2. Create a POST request with the following two headers and make a rest call for secured API.
 
-	* Add Authorization header
+   - Add Authorization header
 	
-```properties
-String passwordIsAuthToken = "PasswordIsAuthToken:{\"apiKey\":\"" + <generated apitoken> + "\"}";
-byte[] encodedAuth = Base64.encodeBase64(passwordIsAuthToken.getBytes(StandardCharsets.US_ASCII));
-String authHeader = "apiToken " + new String(encodedAuth);
-Authorization: apiToken <authHeader>
-```
+	```properties
+	String passwordIsAuthToken = "PasswordIsAuthToken:{\"apiKey\":\"" + <generated apitoken> + "\"}";
+	byte[] encodedAuth = Base64.encodeBase64(passwordIsAuthToken.getBytes(StandardCharsets.US_ASCII));
+	String authHeader = "apiToken " + new String(encodedAuth);
+	Authorization: apiToken <authHeader>
+	```
 
-	* Add apiUser header
+   - Add apiUser header
 	
-```
-apiUser <apiuser>
-```
+	```
+	apiUser <apiuser>
+	```
 
 ## Rundeck Webhook Integration
 
@@ -270,6 +270,7 @@ org.springframework.dao.DuplicateKeyException: Write failed with error code 1100
 In this case, execute the following steps:
 
 * Step 1 : Save the following lines to a file called fixdups.js:
+
 ```
 var dupsExist = false;
 db.dashboards.aggregate([
@@ -299,6 +300,7 @@ if (!dupsExist) {
 	print("No duplicate title dashboards found.");
 }
 ```
+
 * Step 2 : Run the following in the command line:
 
 ```bash
