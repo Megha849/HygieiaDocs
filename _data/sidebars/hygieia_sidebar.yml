@@ -42,6 +42,10 @@ entries:
     - title: API Configuration
       url: /api.html
       output: web, pdf
+      subfolderitems:
+      - title: Getting Started
+        url: /tag_getting_started.html
+        output: web
     - title: UI Configuration
       url: /ui.html
       output: web, pdf
