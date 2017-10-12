@@ -86,10 +86,13 @@ entries:
       url: /jenkinssetup.html
       output: web, pdf    
 
-  - title: Test
+  - title: Configuration Procedure
     output: web, pdf
     folderitems:
-    - title: Test
+    - title: Database Configuration
+      url: /database.html
+      output: web, pdf
+    - title: API Configuration
       url: /api.html
       output: web, pdf
 
@@ -98,9 +101,16 @@ entries:
         output: web, pdf
         subfolderitems:
            - title: Audit API Configuration
-             url: /api.html
+             url: /api-audit.html
              output: web, pdf
-
+    
+    - title: UI Configuration
+      url: /ui.html
+      output: web, pdf
+    - title: Collectors
+      url: /collectors.html
+      output: web, pdf
+      
 #  - title: Troubleshooting
 #    output: web, pdf
 #    folderitems:
