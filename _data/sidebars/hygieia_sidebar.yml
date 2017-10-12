@@ -39,27 +39,26 @@ entries:
     - title: Database Configuration
       url: /database.html
       output: web, pdf
-      
-    - title: API Configuration
-      url: /api.html
-      output: web, pdf
-      
-      subfolders:
-     - title: Audit API
-       output: web, pdf
-       subfolderitems:
-       - title: Audit API
-         url: /api-audit.html
-         output: web
-         
     - title: UI Configuration
       url: /ui.html
       output: web, pdf
     - title: Collectors
       url: /collectors.html
       output: web, pdf
-     
-  - title: Additional Configuration
+      
+    - title: API Configuration
+      url: /api.html
+      output: web, pdf
+      
+      subfolders:
+      - title: Audit API
+        output: web, pdf
+        subfolderitems:
+        - title: Audit API
+          url: /api-audit.html
+          output: web, pdf
+         
+ - title: Additional Configuration
     output: web, pdf
     folderitems:
     - title: Plugins/Webhook
