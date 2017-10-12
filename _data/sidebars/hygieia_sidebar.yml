@@ -38,6 +38,9 @@ entries:
     folderitems:
     - title: Database Configuration
       url: /database.html
+      output: web, pdf    
+    - title: API Configuration
+      url: /api.html
       output: web, pdf
     - title: UI Configuration
       url: /ui.html
@@ -45,19 +48,7 @@ entries:
     - title: Collectors
       url: /collectors.html
       output: web, pdf
-      
-    - title: API Configuration
-      url: /api.html
-      output: web, pdf
-      
-      subfolders:
-      - title: Audit API
-        output: web, pdf
-        subfolderitems:
-        - title: Audit API
-          url: /api-audit.html
-          output: web, pdf
-         
+  
  - title: Additional Configuration
     output: web, pdf
     folderitems:
@@ -97,8 +88,18 @@ entries:
     - title: Troubleshoot Instructions
       url: /troubleshoot.html
       output: web, pdf
-
+    - title: Audit API
+      url: /api-audit.html
+      output: web, pdf
  
+      subfolders: 
+      - title: Chef Server Infrastructure 
+        output: web, pdf 
+        subfolderitems: 
+            - title: How To Access the Chef server 
+              url: /api-audit.html 
+              output: web, pdf 
+
 #  - title: WhiteSource
 #    output: web, pdf
 #    folderitems:
