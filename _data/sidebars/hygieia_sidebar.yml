@@ -85,7 +85,22 @@ entries:
     - title: Set up Jenkins
       url: /jenkinssetup.html
       output: web, pdf    
-        
+
+  - title: Test
+    output: web, pdf
+    folderitems:
+    - title: Test
+      url: /api.html
+      output: web, pdf
+
+      subfolders:
+      - title: Audit API
+        output: web, pdf
+        subfolderitems:
+           - title: Audit API Configuration
+             url: /api.html
+             output: web, pdf
+
 #  - title: Troubleshooting
 #    output: web, pdf
 #    folderitems:
