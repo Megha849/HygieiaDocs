@@ -162,8 +162,8 @@ Once the UI is successfully connected, the following screenshots show successful
 
 ![Image](http://www.capitalone.io/Hygieia/media/images/loginpage.png)
 
-** Sigup with admin user 
-![Image](https://megha849.github.io/Hygieia/media/images/adminuser.png)
+**Sigup with admin user**
+![Image](/media/images/adminuser.png)
 
 ### Encryption for Private Repos
 
