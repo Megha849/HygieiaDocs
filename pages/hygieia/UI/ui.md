@@ -62,7 +62,8 @@ If you do not already have NodeJS installed, download and install the NodeJS MSI
 	
 	In the terminal, navigate to the `/Hygieia/UI` and execute the following command:
 	```bash
-	gulp serve```
+	gulp serve
+	```
 	
 	The dashboard will serve up on port 3000.
 	
