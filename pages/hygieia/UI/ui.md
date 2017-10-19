@@ -112,11 +112,11 @@ If you do not already have NodeJS installed, download and install the NodeJS MSI
 	 mvn clean package integration-test
 	```
 
-**Note:** To test Hygieia's UI layer locally using mock test data, execute the following command:
+**Note**: To test Hygieia's UI layer locally using mock test data, execute the following command:
 
-	```bash
-	 gulp serve --local true
-	```
+```bash
+gulp serve --local true
+```
 An API is not required since data currently comes from the test-data folder. 
 
 ### Docker Image for UI Layer
