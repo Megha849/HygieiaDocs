@@ -75,14 +75,14 @@ If you do not already have NodeJS installed, download and install the NodeJS MSI
 
 *	**Step 1: Install Node and NPM**
 
-Execute the following commands using command line to install bower and gulp globally:
+	Execute the following commands using command line to install bower and gulp globally:
 
-```bash
-
+	```bash
 	npm install -g bower
 	npm install -g gulp
-```
-From your project's root directory, use Git Shell to install bower using the following command:
+	```
+	
+	From your project's root directory, use Git Shell to install bower using the following command:
 
 	```bash
 	# Install dependencies listed in bower.json
