@@ -84,19 +84,19 @@ Execute the following commands using command line to install bower and gulp glob
 ```
 From your project's root directory, use Git Shell to install bower using the following command:
 
-```bash
+	```bash
 	# Install dependencies listed in bower.json
-    npm install
+	npm install
 	# Install dependencies listed in bower.json
 	bower install
-```
+	```
 
 *	**Step 2: Run the UI**
 
 	To run the dashboard, in the command prompt, navigate to `\Hygieia\UI`, and then execute the following command:
 
-	``bash
-		gulp serve
+	```bash
+	gulp serve
 	```
 	The dashboard will serve up on port 3000.
 
