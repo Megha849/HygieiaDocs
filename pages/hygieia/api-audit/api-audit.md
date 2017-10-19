@@ -74,7 +74,7 @@ logRequest=false
 logSplunkRequest=false
 ```
 
-All the above values are optional. Even without the properties file you must be able to run the API (assuming you have MongoDB installed with no authorization).
+All the above values are optional. If you have MongoDB installed with no authorization, you must be able to run the API even without the properties file.
 
 **Note**: If the value of `dbusername` is empty, then system skips MongoDB authorization.
 

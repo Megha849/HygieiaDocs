@@ -11,7 +11,7 @@ permalink: api.html
 
 Hygieia API layer contains all common REST API services that work with the source system data (collected by service tasks). The Hygieia API layer is an abstraction of the local and source system data layer. All REST controllers should be generic to their purpose, and should not be specific to any given source system.
 
-For detailed information on APIs, see the Swagger documentation. 
+For detailed information on APIs, see the Swagger documentation.
 
 Hygieia uses Spring Boot to package the API as an executable JAR file with dependencies.
 
@@ -29,7 +29,7 @@ To configure the Hygieia API layer, execute the following steps:
 	mvn install
 	```
 
-The output file `api.jar` is generated in the `\api\target` folder.
+	The output file `api.jar` is generated in the `\api\target` folder.
 
 *	**Step 2: Set Parameters in the API Properties File**
 
@@ -104,7 +104,7 @@ monitor.proxy.username=[proxy username]
 monitor.proxy.password=[proxy password]
 ```
 
-All the above values are optional. Even without the properties file you must be able to run the API (assuming you have MongoDB installed with no authorization).
+All the above values are optional. If you have MongoDB installed with no authorization, you must be able to run the API even without the properties file.
 
 Note the following:
 
@@ -157,7 +157,6 @@ To configure the Hygieia API layer, execute the following steps:
 	```
 
 	To define more properties, refer to the [Dockerfile](https://github.com/capitalone/Hygieia/blob/master/api/docker/Dockerfile).
-
 
 *	**Step 4: Run the API**
 
