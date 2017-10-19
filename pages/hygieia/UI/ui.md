@@ -174,7 +174,7 @@ Once the UI is successfully connected, the following screenshots show successful
 java -jar <path-to-jar>/core-2.0.5-SNAPSHOT.jar com.capitalone.dashboard.util.Encryption
 ```
 
-2. Add the generated key to the api.properties file.
+2. Add the generated key to the API properties file.
 
 ```bash
 #dashboard.properties
