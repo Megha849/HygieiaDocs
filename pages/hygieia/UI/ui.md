@@ -140,8 +140,9 @@ To configure the Hygieia UI layer, execute the following steps:
 
 Layouts for the dashboard are available at `src\components\templates`. Currently only Cap One is used. To add a widget, add the following snippet to your layeout:
 
-```
-<widget name="[your new widget name]"></widget>``` 
+```bash
+<widget name="[your new widget name]"></widget>
+``` 
 
 Currently, all widgets should be hardcoded in the layout.
 
