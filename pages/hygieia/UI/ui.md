@@ -154,14 +154,14 @@ Once the UI is successfully connected, the following screenshots show successful
 
 **Login page with API layer successfully connected**
 
-![Image](https://megha849.github.io/Hygieia/media/images/apiup.png)
+![Image](/media/images/apiup.png)
 
 **API layer connection unsuccessful**
 
-![Image](https://megha849.github.io/Hygieia/media/images/apidown.png)
+![Image](/media/images/apidown.png)
 
 **Sigup with admin user**
-![Image](https://megha849.github.io/Hygieia/media/images/adminuser.png)
+![Image](/media/images/adminuser.png)
 
 ### Encryption for Private Repos
 
