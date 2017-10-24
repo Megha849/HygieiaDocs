@@ -154,14 +154,14 @@ Once the UI is successfully connected, the following screenshots show successful
 
 **Login page with API layer successfully connected**
 
-![Image](/media/images/apiup.png)
+![Image](https://megha849.github.io/media/images/apiup.png)
 
 **API layer connection unsuccessful**
 
-![Image](/media/images/apidown.png)
+![Image](https://megha849.github.io/media/images/apidown.png)
 
 **Sigup with admin user**
-![Image](/media/images/adminuser.png)
+![Image](https://megha849.github.io/media/images/adminuser.png)
 
 ### Encryption for Private Repos
 
