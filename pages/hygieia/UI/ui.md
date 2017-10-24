@@ -150,7 +150,7 @@ Select a layout for your dashboard. Layouts for the dashboard are available at `
 
 ### API Check
 
-Once the UI is successfully connected, the following screenshots show successful API connection:
+Once the UI is successfully connected, the following screenshots show the API connection status:
 
 **Login page with API layer successfully connected**
 
@@ -160,7 +160,8 @@ Once the UI is successfully connected, the following screenshots show successful
 
 ![Image](/media/images/apidown.png)
 
-**Sigup with admin user**
+**Sigup page to create admin user**
+
 ![Image](/media/images/adminuser.png)
 
 ### Encryption for Private Repos
