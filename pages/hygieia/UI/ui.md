@@ -25,7 +25,7 @@ If you do not already have NodeJS installed, download and install the NodeJS MSI
 
 *	**Step 1: Install Homebrew**
 
-	Homebrew handles downloading, unpacking and installing Node and NPM on your system.
+	Homebrew handles downloading, unpacking and installing npm on your system.
 	To install Homebrew, open terminal and execute the following command:
 
 	```bash
@@ -34,16 +34,17 @@ If you do not already have NodeJS installed, download and install the NodeJS MSI
 	
  	Follow the messages in the terminal to complete the installation process.
 
-*	**Step 2: Install Node and NPM**
+*	**Step 2: Install npm**
 
-	To install Node and NPM using Homebrew, execute the following command:
+	To install npm using Homebrew, execute the following command:
 	
 	```bash
 	brew install node
 	```
 
-*	**Step 3: Install Global Packages**	
-	Execute the following commands to install packages to the global node_modules folder:
+*	**Step 3: Install Global Packages**
+
+	Execute the following commands to install packages to the global `node_modules` directory:
 	
 	```bash
 	npm install -g bower
@@ -58,22 +59,21 @@ If you do not already have NodeJS installed, download and install the NodeJS MSI
 	bower install
 	```
 
-*	**Step 4: Run the UI**	
+*	**Step 4: Run the UI**
 	
 	In the terminal, navigate to the `/Hygieia/UI` and execute the following command:
+	
 	```bash
 	gulp serve
 	```
 	
 	The dashboard will serve up on port 3000.
 	
-**Note**: Update the ngFitText bower.json file to point to 'src/ng-FitText.js' instead of '/src/ng-FitText.js'.
-
 #### Windows Installation
 
 If you do not already have NodeJS installed, download and install the NodeJS MSI package available at: https://nodejs.org/en/download/.
 
-*	**Step 1: Install Node and NPM**
+*	**Step 1: Install npm**
 
 	Execute the following commands using command line to install bower and gulp globally:
 
@@ -106,10 +106,10 @@ If you do not already have NodeJS installed, download and install the NodeJS MSI
 	gulp serve:ghost-mode
 	```
 
-	To run using Maven from UI project root folder:
+	To run using Maven, navigate to `\Hygieia\UI`, and then execute the following command:
 
 	```bash
-	 mvn clean package integration-test
+	mvn clean package integration-test
 	```
 
 **Note**: To test Hygieia's UI layer locally using mock test data, execute the following command:
@@ -117,7 +117,7 @@ If you do not already have NodeJS installed, download and install the NodeJS MSI
 ```bash
 gulp serve --local true
 ```
-An API is not required since data currently comes from the test-data folder. 
+API is not required since data currently comes from the test-data directory.
 
 ### Docker Image for UI Layer
 
@@ -130,6 +130,7 @@ To configure the Hygieia UI layer, execute the following steps:
 	```bash
 	mvn clean package -pl UI docker:build
 	```
+	
 *	**Step 2: Run the UI**
 
 	To run the UI from Docker, execute the following command from the command prompt:
@@ -137,38 +138,34 @@ To configure the Hygieia UI layer, execute the following steps:
 	```bash
 	docker run -t -p 8088:80 --link hygieia-api -i hygieia-ui:latest
 	```
-### Layouts
+	
+### Dashboard Layouts
 
-Layouts for the dashboard are available at `src\components\templates`. Currently only Cap One is used. To add a widget, add the following snippet to your layeout:
+Select a layout for your dashboard. Layouts for the dashboard are available at `src\components\templates`. You can choose a custom template or customize your dashboard layout by selecting widgets while creating your dashboard. The available custom templates are:
 
-```bash
-<widget name="[your new widget name]"></widget>
-``` 
-
-Currently, all widgets should be hardcoded in the layout.
+* Cap One
+* Cap One ChatOps
+* Cloud Dashboard
+* Split View
 
 ### API Check
 
 Once the UI is successfully connected, the following screenshots show successful API connection:
 
-**API layer successfully connected**
+**Login page with API layer successfully connected**
 
 ![Image](http://www.capitalone.io/Hygieia/media/images/apiup.png)
 
 **API layer connection unsuccessful**
 
-![Image](http://www.capitalone.io/Hygieia/media/images/apidown.png)
-
-**Login page with API Layer up**
-
-![Image](http://www.capitalone.io/Hygieia/media/images/loginpage.png)
+![Image](/media/images/apidown.png)
 
 **Sigup with admin user**
 ![Image](/media/images/adminuser.png)
 
 ### Encryption for Private Repos
 
-1. From module core generate a secret key.
+1. From the core module, generate a secret key.
 
 ```bash
 java -jar <path-to-jar>/core-2.0.5-SNAPSHOT.jar com.capitalone.dashboard.util.Encryption
@@ -183,7 +180,7 @@ key=<your-generated-key>
 
 3. Add the same key to your repo settings file. This is required for the target collector to decrypt your saved repo password.
 
-For example, if your repo is GitHub, add the following to the github.properties file:
+For example, if your repo is GitHub, add the following to the `github.properties` file:
 
 ```bash
 #github.properties

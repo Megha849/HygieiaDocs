@@ -47,6 +47,6 @@ export MAVEN_OPTS="$MAVEN_OPTS -Dhttp.proxyHost=your.proxy.domain.name -Dhttp.pr
 
 Tests should now run/pass when built from behind a corporate proxy, even if it is an authenticated proxy
 
-## Proxy Config: Deployment / Operations
+## Proxy Config: Deployment/Operations
 
 Only the above proxy settings (non-authentication) may required to be set on your deployment instance.  Additionally, please update all property files for each collector/API configuration with their specific proxy setting property.
