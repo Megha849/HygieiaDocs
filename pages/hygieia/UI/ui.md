@@ -154,7 +154,7 @@ Once the UI is successfully connected, the following screenshots show successful
 
 **Login page with API layer successfully connected**
 
-![Image](http://www.capitalone.io/Hygieia/media/images/apiup.png)
+![Image](/media/images/apiup.png)
 
 **API layer connection unsuccessful**
 
