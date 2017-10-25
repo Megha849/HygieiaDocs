@@ -16,7 +16,7 @@ To configure the Hygieia-Jenkins Plugin, execute the following steps:
 
 *	**Step 1: Run Unit Test Cases**
 
-	Run unit test case from `/Hygieia` to check Hygieia code:
+	From your project's root directory, run the unit test cases to check Hygieia code:
 
 	```bash
 	mvn test
@@ -24,23 +24,25 @@ To configure the Hygieia-Jenkins Plugin, execute the following steps:
 	
 *	**Step 2: Create HPI File**
 
-	Create an HPI file to install in Jenkins. The HPI file is stored at `/Hygieia/hygieia-jenkins-plugin/target/hygieia-publisher.hpi`. Execute the following command to build the Hygieia-Jenkins Plugin:
+	Create an HPI file to install in Jenkins. The HPI file is stored at `\Hygieia\hygieia-jenkins-plugin\target\hygieia-publisher.hpi`. Execute the following command to build the Hygieia-Jenkins Plugin:
 
 	```bash
 	mvn clean package
 	```
 	
-	The resulting .jar and .hpi files are saved in the `/hygieia-jenkins-plugin/target` folder.
+	The output file `hygieia-publisher.jar` is generated in the `\hygieia-jenkins-plugin\target` folder.
 
-**Note**: The Hygieia-Jenkins plugin uses the Hygieia core package. The main project is JDK 1.8 compiled, if you have Jenkins running on Java versions prior to Java v1.8, ensure to recompile Hygieia's core package with the previous version and then build the Jenkins plugin.
+**Note**: The main project is compiled using JDK v1.8. If you are running Jenkins on Java versions prior to Java v1.8, recompile Hygieia’s core package with the prior version, and then build the Jenkins plugin.
 
 ### Jenkins 2.0 with Pipeline 
 
+To install the plugin in Jenkins:
+
+In the toolbar, navigate to Project Settings > Variables > Add Variable.  
+
 1. Install the plugin by using 'Advanced' option in 'Jenkins Plugin Management' to manually upload the file from local disk.
 2. Restart Jenkins.
-3. Configure Global Hygieia Publisher in Jenkins Manage Jenkins/Configure System. Enter Hygieia API url such as `http://localhost:8080/api`. There is no API token implented at this time and it is work in progress.
-
-![NewLink](/media/images/jenkins-global.png)
+3. Configure Global Hygieia Publisher in Jenkins Manage Jenkins/Configure System. Enter Hygieia API url such as `http://localhost:8080/api`. 
 
 4. In Jenkins pipeline syntax page, Hygieia publish steps are displayed:
 
@@ -58,7 +60,7 @@ To configure the Hygieia-Jenkins Plugin, execute the following steps:
 
 1. Install the plugin by using 'Advanced' option in Jenkins Plugin Management to manually upload the file from local disk.
 2. Restart Jenkins.
-3. Configure Global Hygieia Publisher in Jenkins Manage Jenkins/Configure System. Enter Hygieia API url such as `http://localhost:8080/api`. There is no API token implemented at this time and it is work in progress.
+3. Configure Global Hygieia Publisher in Jenkins Manage Jenkins/Configure System. Enter Hygieia API url such as `http://localhost:8080/api`. 
 
 ![Image](https://megha849.github.io/HygieiaDocs/media/images/jenkins-global.png)
 

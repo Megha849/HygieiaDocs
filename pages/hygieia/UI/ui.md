@@ -160,7 +160,7 @@ Once the UI is successfully connected, the following screenshots show the API co
 
 ![Image](/media/images/apidown.png)
 
-**Sigup page to create admin user**
+**Signup page to create admin user**
 
 ![Image](/media/images/adminuser.png)
 
