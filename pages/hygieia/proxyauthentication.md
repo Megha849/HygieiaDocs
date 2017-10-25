@@ -14,7 +14,7 @@ Hygieia supports proxy authentication to work with corporate firewalls. To imple
 
 ## Developer Settings
 
-Update the following properties in your Maven settings.xml file:
+Update the following properties in your Maven `settings.xml` file:
 
 ```bash
 ...
@@ -36,13 +36,13 @@ Update the following properties in your Maven settings.xml file:
 ...
 ```
 
-In addition to this, set the export variables from the terminal/command prompt:
+In addition, set the export variables from the terminal/command prompt:
 
 ```bash
 export HTTP_PROXY=http://companyId999:yourPassword@your.proxy.domain.name:8080
 export HTTPS_PROXY=http://companyId999:yourPassword@your.proxy.domain.name:8080
 export JAVA_OPTS="$JAVA_OPTS -Dhttp.proxyHost=your.proxy.domain.name -Dhttp.proxyPort=8080 -Dhttp.proxyUser=companyId999 -Dhttp.proxyPassword=yourPassword"
-# This option may be duplicative if you have already updated your Maven settings.xml file, but will only help:
+# This variable is a duuplicate if you have already updated your Maven settings.xml file, but will only help:
 export MAVEN_OPTS="$MAVEN_OPTS -Dhttp.proxyHost=your.proxy.domain.name -Dhttp.proxyPort=8080 -Dhttp.proxyUser=companyId999 -Dhttp.proxyPassword=yourPassword"
 ```
 
@@ -56,7 +56,7 @@ To implement proxy authentication for your deployment instance, set the non-auth
 export HTTP_PROXY=http://companyId999:yourPassword@your.proxy.domain.name:8080
 export HTTPS_PROXY=http://companyId999:yourPassword@your.proxy.domain.name:8080
 export JAVA_OPTS="$JAVA_OPTS -Dhttp.proxyHost=your.proxy.domain.name -Dhttp.proxyPort=8080 -Dhttp.proxyUser=companyId999 -Dhttp.proxyPassword=yourPassword"
-# This option may be duplicative if you have already updated your Maven settings.xml file, but will only help:
+# This variable is a duuplicate if you have already updated your Maven settings.xml file, but will only help:
 export MAVEN_OPTS="$MAVEN_OPTS -Dhttp.proxyHost=your.proxy.domain.name -Dhttp.proxyPort=8080 -Dhttp.proxyUser=companyId999 -Dhttp.proxyPassword=yourPassword"
 ```
 In addition, update the property file for each collector/API configuration with their specific proxy setting property.
