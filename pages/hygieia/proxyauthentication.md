@@ -7,7 +7,7 @@ sidebar: hygieia_sidebar
 permalink: proxyauthentication.html
 ---
 
-Hygieia supports proxy authentication to work with corporate firewalls. To implement proxy authentication for Hygieia, the following settings are required:
+Hygieia supports proxy authentication to work with corporate firewalls. You can implement proxy authentication for Hygieia with the following settings:
 
 - Developer Settings
 - Deployment/Operations Settings
