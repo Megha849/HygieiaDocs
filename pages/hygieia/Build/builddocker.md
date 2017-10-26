@@ -7,32 +7,39 @@ sidebar: hygieia_sidebar
 permalink: builddocker.html
 ---
 
-### Build Docker images and setup id for mongodb
+To build a Docker image for all components of Hygieia, execute the following steps:
 
-* Build the containers
+* **Step 1: Build the containers**
 
 ```bash
 mvn docker:build
 ```
 
-* Bring up the container images
+* **Step 1: Start the Container Images**
 
 ```bash
+# Start containers in the background and keep them running
 docker-compose up -d
 ```
 
-* Create a user in Mongo (if you log into the container then you don't have to install Mongo locally)
+* **Step 3: Create a user in Mongo**
+
+If you log into the container then you don't have to install Mongo locally.
+
+Execute the following commands to Connect to MongoDB, and then add dashboard user:
 
 ```bash
+# Connect to MongoDB
 docker exec -t -i mongodb2 bash
 ```
 ```bash
-mongo 192.168.64.2/admin  --eval 'db.getSiblingDB("dashboard").createUser({user: "db", pwd: "dbpass", roles: [{role: "readWrite", db: "dashboard"}]})'
+mongo 192.168.64.2/admin  --eval 'db.getSiblingDB("dashboarddb").createUser({user: "dashboarduser", pwd: "dbpassword", roles: [{role: "readWrite", db: "dashboarddb"}]})'
 ```
 
 ## Create a `docker-compose.override.yml` to configure your environment
-These are the most common entries, the uncommented ones are mandatory if you want the collector to work.
-For dev/testing you will find it useful to change the CRON entries to ``"0 * * * * *"``
+
+The most commonly used properties are listed and the uncommented properties are mandatory for the collector to work:
+
 ```
 hygieia-github-scm-collector:
   environment:
@@ -65,13 +72,18 @@ hygieia-sonar-codequality-collector:
   - SONAR_CRON=0 * * * * *
 ```
 
-* Make sure everything is restarted - _it may fail if the user doesn't exist at start-up_
+**Note**: For dev/testing the project, change the CRON entries to ``"0 * * * * *"``.
+
+* **Step 4: Restart all Services**
+
+Ensure there is an existing user at start-up.
 
 ```bash
+#Restarts all stopped and running services.
 docker-compose restart
 ```
 
-* Get the port for the UI
+To get the port for the UI Layer, execute the following command:
 
 ```bash
 docker port hygieia-ui
