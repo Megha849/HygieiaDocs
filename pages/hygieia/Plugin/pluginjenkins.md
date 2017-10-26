@@ -48,6 +48,7 @@ To install the plugin in Jenkins:
 
 1. In the Jenkins toolbar, navigate to Manage Plugins > Advanced Tab.
 2. In the 'Upload Plugin' section, click 'Choose File', navigate to the `\hygieia-jenkins-plugin\target` folder, and then select the .hpi file. Click Upload. 
+   
    Once the plugin is installed, you can view the plugin listed in the 'Installed' tab.
 3. Restart Jenkins.
 4. Configure Global Hygieia Publisher in Jenkins Manage Jenkins/Configure System. Enter Hygieia API url such as `http://localhost:8080/api`.
@@ -83,7 +84,7 @@ The build fails due to the following maven error:
 
 `[ERROR] Failed to execute goal on project hygieia-publisher: Could not resolve dependencies for project org.jenkins-ci.plugins:hygieia-publisher:hpi:1.3-SNAPSHOT: Could not find artifact com.capitalone.dashboard:core:jar:2.0.2-SNAPSHOT in anonymous (https://mycompany.nexus.com/nexus/content/groups/CLM) -> [Help 1][ERROR]`
 
-In this case, before you build the Hygieia-Jenkins Plugin, clone Hygieia root, change directory to `/Hygieia/core', and execute the following command:
+In this case, before you build the Hygieia-Jenkins Plugin, clone Hygieia root, change directory to `\Hygieia\core`, and execute the following command:
 
 ```bash
 mvn clean install
@@ -91,7 +92,6 @@ mvn clean install
 
 ## GitHub Webhook
 
-You can use GitHub webhooks to publish commit information to Hygieia. If you use webhooks, you will not need to run the github collector.
+You can use GitHub webhooks to publish commit information to the Feature widget in Hygieia dashboard. If you use webhooks, you need not run the github collector.
 
-Your Github webhook’s payload url should be set to: http://hygieia-base-url/api/commit/github/v3
-Select to publish just the “push” events
+Your Github webhook’s payload url should be set to: http://hygieia-base-url/api/commit/github/v3. Select to publish just the “push” events.
