@@ -11,7 +11,7 @@ To build a Docker image for all components of Hygieia, execute the following ste
 
 *	**Step 1: Build the Containers**
 
-	To package the Hygieia source code into an executable JAR file, run the maven build from the `\Hygieia` directory of your source code installation:
+	To package the Hygieia source code into an executable JAR file, run the Maven build from the `\Hygieia` directory of your source code installation:
 
 	```bash
 	mvn docker:build
@@ -27,9 +27,9 @@ To build a Docker image for all components of Hygieia, execute the following ste
 
 *	**Step 3: Create a User in MongoDB**
 
-	If you log into the container then you don't have to install MongoDB locally.
+	If you login to the container, then you do not have to install MongoDB locally.
 
-	Execute the following commands to Connect to MongoDB, and then add dashboard user:
+	Execute the following commands to connect to MongoDB, and then add dashboard user:
 
 	```bash
 	# Connect to MongoDB
@@ -43,7 +43,7 @@ To build a Docker image for all components of Hygieia, execute the following ste
 
 	To configure your environment, create a `docker-compose.override.yml`. The most commonly used properties are listed and the uncommented properties are mandatory for the collector to work:
 
-	```
+	```bash
 	hygieia-github-scm-collector:
 	  environment:
 	  - GITHUB_HOST=github.com
@@ -74,10 +74,9 @@ To build a Docker image for all components of Hygieia, execute the following ste
 	  - SONAR_URL=http://192.168.99.100:9000
 	  - SONAR_CRON=0 * * * * *
 	```
-
-	To refer to the generic properties, refer to [docker-compose.yml](https://github.com/capitalone/Hygieia/blob/master/docker-compose.yml).
-
 	**Note**: For dev/testing the project, change the CRON entries to ``"0 * * * * *"``.
+
+	To refer to the generic properties, see the [docker-compose.yml](https://github.com/capitalone/Hygieia/blob/master/docker-compose.yml) file.
 
 *	**Step 5: Restart all Services**
 

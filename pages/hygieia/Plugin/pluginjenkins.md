@@ -1,23 +1,24 @@
 ---
-title: Hygieia-Jenkins Plugin
+title: 
 tags:
 keywords: 
 summary: Jenkins Plugin for Hygieia
 sidebar: hygieia_sidebar
 permalink: pluginjenkins.html
 ---
+## Hygieia-Jenkins Plugin
 
 Hygieia collectors are classified into the following types for data collection:
 
-- Pull-based Collectors - These collectors are used to pull all information from the DevOps tools. 
-- Push-based Collectors - These collectors are used to collect a subset of data from the DevOps tools.
+- Pull-based Collectors - These collectors pull all information from the DevOps tools. 
+- Push-based Collectors - These collectors collect a subset of data from the DevOps tools.
 
-The Hygieia-Jenkins plugin is a push-based collector that supports the Jenkins pipeline code for continuous integration and delivery.
+The Hygieia-Jenkins plugin is a push-based collector that supports the Jenkins pipeline code for continuous integration and delivery. You can use the Hygieia-Jenkins plugin to publish data from Jenkins to the Hygieia dashboard. You can publish build and artifact information, sonar test results, deployment results, and Cucumber test results. Therefore, you need not run the corresponding collectors if you use Jenkins for build, deploy, sonar analysis and cucumber tests.
 
 The Hygieia-Jenkins plugin requires installation of:
 
-- Maven 3.3.9 and above
-- JDK 1.8
+- Maven (recommended version 3.3.9 and above)
+- JDK (recommended version 1.8)
 
 To configure the Hygieia-Jenkins Plugin, execute the following steps:
 
@@ -63,7 +64,7 @@ To install the plugin in Jenkins:
 
 ![Image](https://megha849.github.io/HygieiaDocs/media/images/jenkins2.0-pipeline-deploy-publish.png)
 
-## Jenkins (pre Jenkins 2.0)
+### Jenkins (pre Jenkins 2.0)
 
 1. Install the plugin by using 'Advanced' option in Jenkins Plugin Management to manually upload the file from local disk.
 2. Restart Jenkins.
@@ -76,7 +77,7 @@ To install the plugin in Jenkins:
 
 ![Image](https://megha849.github.io/HygieiaDocs/media/images/jenkins-job-config.png)
 
-## Troubleshooting Instructions
+### Troubleshooting Instructions
 
 The build fails due to the following maven error:
 
@@ -87,3 +88,10 @@ In this case, before you build the Hygieia-Jenkins Plugin, clone Hygieia root, c
 ```bash
 mvn clean install
 ```
+
+## GitHub Webhook
+
+You can use GitHub webhooks to publish commit information to Hygieia. If you use webhooks, you will not need to run the github collector.
+
+Your Github webhook’s payload url should be set to: http://hygieia-base-url/api/commit/github/v3
+Select to publish just the “push” events
