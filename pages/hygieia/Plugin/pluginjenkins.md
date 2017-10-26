@@ -10,10 +10,10 @@ permalink: pluginjenkins.html
 
 Hygieia collectors are classified into the following types for data collection:
 
-- Pull-based Collectors - These collectors pull all information from the DevOps tools. 
+- Pull-based Collectors - These collectors pull all information from the DevOps tools.
 - Push-based Collectors - These collectors collect a subset of data from the DevOps tools.
 
-The Hygieia-Jenkins plugin is a push-based collector that supports the Jenkins pipeline code for continuous integration and delivery. You can use the Hygieia-Jenkins plugin to publish data from Jenkins to the Hygieia dashboard. You can publish build and artifact information, sonar test results, deployment results, and Cucumber test results. Therefore, you need not run the corresponding collectors if you use Jenkins for build, deploy, sonar analysis and cucumber tests.
+The Hygieia-Jenkins plugin is a push-based collector that supports the Jenkins pipeline code for continuous integration and delivery. You can use the Hygieia-Jenkins plugin to publish data from Jenkins to the Hygieia dashboard. You can publish build and artifact information, sonar test results, deployment results, and Cucumber test results. Therefore, you need not run the corresponding collectors if you use Jenkins for build, deploy, sonar analysis, and Cucumber tests.
 
 The Hygieia-Jenkins plugin requires installation of:
 
@@ -47,34 +47,44 @@ To configure the Hygieia-Jenkins Plugin, execute the following steps:
 To install the plugin in Jenkins:
 
 1. In the Jenkins toolbar, navigate to Manage Plugins > Advanced Tab.
-2. In the 'Upload Plugin' section, click 'Choose File', navigate to the `\hygieia-jenkins-plugin\target` folder, and then select the .hpi file. Click Upload. 
+2. In the 'Upload Plugin' section, click 'Choose File', navigate to the `\hygieia-jenkins-plugin\target` folder, and then select the `hygieia-publisher.hpi` file. Click Upload. 
    
    Once the plugin is installed, you can view the plugin listed in the 'Installed' tab.
 3. Restart Jenkins.
-4. Configure Global Hygieia Publisher in Jenkins Manage Jenkins/Configure System. Enter Hygieia API url such as `http://localhost:8080/api`.
+
+4. Configure Global Hygieia Publisher in Jenkins.
+
+   In the Jenkins toolbar, navigate to Manage Jenkins > Configure System. 
+   In the Jenkins URL, Enter the Hygieia API URL, `http://localhost:8080/api`.
 
 5. In Jenkins pipeline syntax page, Hygieia publish steps are displayed:
 
 ![Image](https://megha849.github.io/HygieiaDocs/media/images/jenkins2.0-steplist.png)
 
-6. Select a step (for example, Hygieia Deploy Step), fill in the required information and click 'Generate Pipeline Script'. The generated script can now be copied to the pipeline script:
+6. Select a step (for example, Hygieia Deploy Step), fill in the required information and click 'Generate Pipeline Script'. Copy the generated script to the pipeline script:
 
 ![Image](https://megha849.github.io/HygieiaDocs/media/images/jenkins2.0-hygieia-deploy-step.png)
 
-7. Screenshot below shows a simple pipeline script with maven build, hygieia artifact and deploy publishing.
+7. The following screenshot shows a simple pipeline script with Maven build, Hygieia artifact, and deploy publishing.
 
 ![Image](https://megha849.github.io/HygieiaDocs/media/images/jenkins2.0-pipeline-deploy-publish.png)
 
-### Jenkins (pre Jenkins 2.0)
+### Jenkins (Versions Prior to 2.0)
 
-1. Install the plugin by using 'Advanced' option in Jenkins Plugin Management to manually upload the file from local disk.
-2. Restart Jenkins.
-3. Configure Global Hygieia Publisher in Jenkins Manage Jenkins/Configure System. Enter Hygieia API url such as `http://localhost:8080/api`. 
+1. In the Jenkins toolbar, navigate to Manage Plugins > Advanced Tab.
+2. In the 'Upload Plugin' section, click 'Choose File', navigate to the `\hygieia-jenkins-plugin\target` folder, and then select the `hygieia-publisher.hpi` file. Click Upload. 
+   
+   Once the plugin is installed, you can view the plugin listed in the 'Installed' tab.
+3. Restart Jenkins.
+4. Configure Global Hygieia Publisher in Jenkins.
+
+   In the Jenkins toolbar, navigate to Manage Jenkins > Configure System. 
+   In the Jenkins URL, Enter the Hygieia API URL, `http://localhost:8080/api`.
 
 ![Image](https://megha849.github.io/HygieiaDocs/media/images/jenkins-global.png)
 
-4. For a build job, add a Post build action 'Hygieia Publisher'. 
-5. Select what to send to Hygieia. Currently, 'Build', 'Artifact Info', 'Sonar Anslysis', 'Deployment', and 'Cucumber Test Results' can be published.
+5. For a build job, add the Post build action 'Hygieia Publisher'. 
+6. Select the data to be sent to Hygieia. Currently, 'Build', 'Artifact Info', 'Sonar Analysis', 'Deployment', and 'Cucumber Test Results' can be published.
 
 ![Image](https://megha849.github.io/HygieiaDocs/media/images/jenkins-job-config.png)
 
@@ -82,9 +92,9 @@ To install the plugin in Jenkins:
 
 The build fails due to the following maven error:
 
-`[ERROR] Failed to execute goal on project hygieia-publisher: Could not resolve dependencies for project org.jenkins-ci.plugins:hygieia-publisher:hpi:1.3-SNAPSHOT: Could not find artifact com.capitalone.dashboard:core:jar:2.0.2-SNAPSHOT in anonymous (https://mycompany.nexus.com/nexus/content/groups/CLM) -> [Help 1][ERROR]`
+`[ERROR] Failed to execute goal on project hygieia-publisher: Could not resolve dependencies for project org.jenkins-ci.plugins:hygieia-publisher:hpi:1.3-SNAPSHOT: Could not find artifact com.capitalone.dashboard:core:jar:2.0.2-SNAPSHOT in anonymous (https://mycompany.nexus.com/nexus/content/groups/CLM) > [Help 1][ERROR]`
 
-In this case, before you build the Hygieia-Jenkins Plugin, clone Hygieia root, change directory to `\Hygieia\core`, and execute the following command:
+In this case, before you build the Hygieia-Jenkins Plugin, clone Hygieia root, change directory to `\Hygieia\core`, and then execute the following command:
 
 ```bash
 mvn clean install
@@ -92,6 +102,14 @@ mvn clean install
 
 ## GitHub Webhook
 
-You can use GitHub webhooks to publish commit information to the Feature widget in Hygieia dashboard. If you use webhooks, you need not run the github collector.
+You can use GitHub webhooks to publish commit information to the Feature widget in the Hygieia dashboard. If you use webhooks, you need not run the GitHub collector.
 
-Your Github webhook’s payload url should be set to: http://hygieia-base-url/api/commit/github/v3. Select to publish just the “push” events.
+* Your Github webhook’s payload URL should be set to: http://hygieia-base-url/api/commit/github/v3. 
+
+* Select the option of publishing just the 'push' events.
+
+
+
+
+
+
