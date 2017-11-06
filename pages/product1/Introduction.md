@@ -5,10 +5,10 @@ type: first_page
 homepage: true
 toc: false
 sidebar: hygieia_sidebar
-permalink: getting_started.html
+permalink: Introduction.html
 redirect_from:
   - /index.html
-  - /hygieia/getting_started.html
+  - /hygieia/Introduction.html
 ---
 
 ## Introduction
