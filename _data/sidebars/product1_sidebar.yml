@@ -1,10 +1,12 @@
 # This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
 
+
 entries:
-- title: sidebar
+- title: Sidebar
   #product: Collectors
   #version: 1.0
   folders:
+
   - title:
     output: pdf
     type: frontmatter
@@ -18,117 +20,9 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Introduction
+  - title: Getting Started
     output: web, pdf
     folderitems:
-    - title: About Hygieia
-      url: Introduction.html
-      output: web
-    
- - title: Dashboard Configuration
-   output: web, pdf
-   folderitems:
-   - title: Widget View
-     url: signup.html
-     output: web, pdf
-
-   - title: Select your Dashboard
-     url: /p1_sample5.html
-     output: web, pdf
-
-   - title: Create a Dashboard
-     url: /p1_sample6.html
-     output: web, pdf
-
-   - title: Search an Existing Dashboard
-     url: /p1_sample7.html
-     output: web, pdf
-     
- - title: Hygieia Dashboard
-   output: web, pdf
-   folderitems:
-   - title: Signup and Login
-     url: signup.html
-     output: web, pdf
-
-   - title: Select your Dashboard
-     url: /p1_sample5.html
-     output: web, pdf
-
-   - title: Create a Dashboard
-     url: /p1_sample6.html
-     output: web, pdf
-
-   - title: Search an Existing Dashboard
-     url: /p1_sample7.html
-     output: web, pdf
-
- - title: Configure the Dashboard
-   output: web, pdf
-   folderitems:
-   - title: Dashboard Views
-     url: signup.html
-     output: web, pdf
-
-   - title: Widget View
-     url: /p1_sample5.html
-     output: web, pdf
-     subfolderitems:
-           - title: Standard Dashboard Widgets
-             url: /api-audit.html
-             output: web, pdf
-             
-           - title: Configure Widgets - Common Procedure
-             url: /api-audit.html
-             output: web, pdf
-             
-           - title: Configure Feature Widget
-             url: /api-audit.html
-             output: web, pdf
-             
-           - title: Configure Code Repo Widget
-             url: /api-audit.html
-             output: web, pdf
-             
-           - title: Configure Build Widget
-             url: /api-audit.html
-             output: web, pdf
-             
-           - title: Configure Code Analysis and Performance Widgets
-             url: /api-audit.html
-             output: web, pdf 
-             
-           - title: Configure Deploy Widget
-             url: /api-audit.html
-             output: web, pdf 
-             
-           - title: Configure Monitor Widget
-             url: /api-audit.html
-             output: web, pdf   
-             
-   - title: Product View
-     url: /p1_sample6.html
-     output: web, pdf
-
-   - title: Pipeline View
-     url: /p1_sample7.html
-     output: web, pdf
-     
-   - title: Cloud View
-     url: /p1_sample7.html
-     output: web, pdf
-     
- - title: Dashboard Administration
-   output: web, pdf
-   folderitems:
-   - title: Change Dashboard Settings
-     url: signup.html
-     output: web, pdf
-     
-   - title: Delete Dashboard
-     url: signup.html
-     output: web, pdf
-     
-     - title: Admin User
-     url: signup.html
-     output: web, pdf
+    - title: Introduction
+      url: /Introduction.html
+      output: web, pdf
