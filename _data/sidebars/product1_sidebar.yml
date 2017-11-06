@@ -96,12 +96,13 @@ entries:
              url: /api-audit.html
              output: web, pdf 
              
-      - title: Product View
-        url: /p1_sample6.html
-        output: web, pdf
-      - title: Pipeline View
-        url: /p1_sample7.html
-        output: web, pdf
-      - title: Cloud View
-        url: /p1_sample7.html
-        output: web, pdf      
+    folderitems:         
+    - title: Product View
+      url: /p1_sample6.html
+      output: web, pdf
+    - title: Pipeline View
+      url: /p1_sample7.html
+      output: web, pdf
+    - title: Cloud View
+      url: /p1_sample7.html
+      output: web, pdf      
