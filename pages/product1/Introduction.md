@@ -4,7 +4,7 @@ tags:
 type: first_page
 homepage: true
 toc: false
-sidebar: hygieia_sidebar
+sidebar: product1_sidebar
 permalink: Introduction.html
 redirect_from:
   - /index.html
