@@ -26,3 +26,35 @@ entries:
     - title: Introduction
       url: /Introduction.html
       output: web, pdf
+      
+  - title: Dashboard Configuration
+    output: web, pdf
+    folderitems:
+    - title: Widget View
+      url: signup.html
+      output: web, pdf
+    - title: Select your Dashboard
+      url: /p1_sample5.html
+      output: web, pdf
+    - title: Create a Dashboard
+      url: /p1_sample6.html
+      output: web, pdf
+    - title: Search an Existing Dashboard
+      url: /p1_sample7.html
+      output: web, pdf
+     
+  - title: Hygieia Dashboard
+    output: web, pdf
+    folderitems:
+    - title: Signup and Login
+      url: signup.html
+      output: web, pdf
+    - title: Select your Dashboard
+      url: /p1_sample5.html
+      output: web, pdf
+    - title: Create a Dashboard
+      url: /p1_sample6.html
+      output: web, pdf
+    - title: Search an Existing Dashboard
+      url: /p1_sample7.html
+      output: web, pdf

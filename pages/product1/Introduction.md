@@ -42,7 +42,7 @@ Cloud View - The cloud view gives details about AWS cloud resources and applicat
 
 Before you begin to configure, make sure you have the following prerequisites:
 
-- Have the Database Layer 
+- Database Layer 
 
 - UI Layer
 
