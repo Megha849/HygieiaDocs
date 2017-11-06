@@ -1,11 +1,10 @@
 # This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
 
 entries:
-- title: Sidebar
+- title: sidebar
   #product: Collectors
   #version: 1.0
   folders:
-
   - title:
     output: pdf
     type: frontmatter
@@ -21,16 +20,13 @@ entries:
 
   - title: Introduction
     output: web, pdf
-    
     folderitems:
     - title: About Hygieia
       url: Introduction.html
       output: web
-
     
  - title: Dashboard Configuration
    output: web, pdf
-
    folderitems:
    - title: Widget View
      url: signup.html
