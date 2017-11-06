@@ -5,7 +5,8 @@ topnav:
   items:
     - title: GitHub
       external_url: https://github.com/capitalone/Hygieia
-    
+    - title: Dashboard Configuration
+      url: /Introduction.html
       
 #Topnav dropdowns
 topnav_dropdowns:
