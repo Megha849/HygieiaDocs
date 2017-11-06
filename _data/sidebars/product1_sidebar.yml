@@ -94,5 +94,14 @@ entries:
              output: web, pdf 
            - title: Configure Monitor Widget
              url: /api-audit.html
-             output: web, pdf   
+             output: web, pdf 
              
+      - title: Product View
+        url: /p1_sample6.html
+        output: web, pdf
+      - title: Pipeline View
+        url: /p1_sample7.html
+        output: web, pdf
+      - title: Cloud View
+        url: /p1_sample7.html
+        output: web, pdf      
