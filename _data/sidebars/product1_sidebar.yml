@@ -65,32 +65,34 @@ entries:
     - title: Dashboard Views
       url: signup.html
       output: web, pdf
-    - title: Widget View
-      url: /p1_sample5.html
-      output: web, pdf
-      subfolderitems:
-         - title: Standard Dashboard Widgets
-           url: /api-audit.html
-           output: web, pdf
-         - title: Configure Widgets - Common Procedure
-           url: /api-audit.html
-           output: web, pdf
-         - title: Configure Feature Widget
-           url: /api-audit.html
-           output: web, pdf
-         - title: Configure Code Repo Widget
-           url: /api-audit.html
-           output: web, pdf
-         - title: Configure Build Widget
-           url: /api-audit.html
-           output: web, pdf
-         - title: Configure Code Analysis and Performance Widgets
-           url: /api-audit.html
-           output: web, pdf 
-         - title: Configure Deploy Widget
-           url: /api-audit.html
-           output: web, pdf 
-         - title: Configure Monitor Widget
-           url: /api-audit.html
-           output: web, pdf   
+      
+      subfolders:
+      - title: Widget View
+        url: /p1_sample5.html
+        output: web, pdf
+        subfolderitems:
+           - title: Standard Dashboard Widgets
+             url: /api-audit.html
+             output: web, pdf
+           - title: Configure Widgets - Common Procedure
+             url: /api-audit.html
+             output: web, pdf
+           - title: Configure Feature Widget
+             url: /api-audit.html
+             output: web, pdf
+           - title: Configure Code Repo Widget
+             url: /api-audit.html
+             output: web, pdf
+           - title: Configure Build Widget
+             url: /api-audit.html
+             output: web, pdf
+           - title: Configure Code Analysis and Performance Widgets
+             url: /api-audit.html
+             output: web, pdf 
+           - title: Configure Deploy Widget
+             url: /api-audit.html
+             output: web, pdf 
+           - title: Configure Monitor Widget
+             url: /api-audit.html
+             output: web, pdf   
              
