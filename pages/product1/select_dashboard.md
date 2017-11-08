@@ -27,7 +27,7 @@ This tab displays a list of all product dashboards created in Hygieia.
 
 To create a new team dashboard, click 'Create a new dashboard'. For detailed instructions, see [Create a New Dashboard](#create-a-new-dashboard).
 
-### Product Dashboards Tab
+#### Product Dashboards Tab
 
 This tab displays all the products for a team.
 
