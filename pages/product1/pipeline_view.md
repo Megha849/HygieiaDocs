@@ -1,5 +1,5 @@
 ---
-title: Widget View
+title: Pipeline View
 tags: 
 type: 
 homepage: 

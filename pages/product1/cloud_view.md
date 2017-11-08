@@ -1,5 +1,5 @@
 ---
-title: Widget View
+title: Cloud View
 tags: 
 type: 
 homepage: 

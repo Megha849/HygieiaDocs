@@ -1,5 +1,5 @@
 ---
-title: Widget View
+title: Product View
 tags: 
 type: 
 homepage: 
