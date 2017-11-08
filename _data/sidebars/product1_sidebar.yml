@@ -56,7 +56,7 @@ entries:
       url: cloud_view.html
       output: web, pdf   
 
-- title: Dashboard Administration
+  - title: Dashboard Administration
     output: web, pdf
     folderitems:
     - title: Administration Options
