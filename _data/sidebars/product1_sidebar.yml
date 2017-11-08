@@ -20,29 +20,13 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Getting Started
+  - title: Introduction
     output: web, pdf
     folderitems:
-    - title: Introduction
+    - title: Overview
       url: /Introduction.html
       output: web, pdf
       
-  - title: Dashboard Configuration
-    output: web, pdf
-    folderitems:
-    - title: Widget View
-      url: signup.html
-      output: web, pdf
-    - title: Select your Dashboard
-      url: /p1_sample5.html
-      output: web, pdf
-    - title: Create a Dashboard
-      url: /p1_sample6.html
-      output: web, pdf
-    - title: Search an Existing Dashboard
-      url: /p1_sample7.html
-      output: web, pdf
-     
   - title: Hygieia Dashboard
     output: web, pdf
     folderitems:
@@ -52,56 +36,30 @@ entries:
     - title: Select your Dashboard
       url: /p1_sample5.html
       output: web, pdf
-    - title: Create a Dashboard
-      url: /p1_sample6.html
-      output: web, pdf
-    - title: Search an Existing Dashboard
-      url: /p1_sample7.html
-      output: web, pdf
-      
+    
   - title: Configure the Dashboard
     output: web, pdf
     folderitems:
     - title: Dashboard Views
-      url: signup.html
+      url: dashboard_views.html
       output: web, pdf
-      
-      subfolders:
-      - title: Widget View
-        url: /p1_sample5.html
-        output: web, pdf
-        subfolderitems:
-           - title: Standard Dashboard Widgets
-             url: /api-audit.html
-             output: web, pdf
-           - title: Configure Widgets - Common Procedure
-             url: /api-audit.html
-             output: web, pdf
-           - title: Configure Feature Widget
-             url: /api-audit.html
-             output: web, pdf
-           - title: Configure Code Repo Widget
-             url: /api-audit.html
-             output: web, pdf
-           - title: Configure Build Widget
-             url: /api-audit.html
-             output: web, pdf
-           - title: Configure Code Analysis and Performance Widgets
-             url: /api-audit.html
-             output: web, pdf 
-           - title: Configure Deploy Widget
-             url: /api-audit.html
-             output: web, pdf 
-           - title: Configure Monitor Widget
-             url: /api-audit.html
-             output: web, pdf 
-             
+    - title: Widget View
+      url: widget_view.html
+      output: web, pdf
     - title: Product View
-      url: /p1_sample6.html
+      url: product_view.html
       output: web, pdf
     - title: Pipeline View
-      url: /p1_sample7.html
+      url: pipeline_view.html
       output: web, pdf
     - title: Cloud View
-      url: /p1_sample7.html
-      output: web, pdf      
+      url: cloud_view.html
+      output: web, pdf   
+
+- title: Dashboard Administration
+    output: web, pdf
+    folderitems:
+    - title: Administration Options
+      url: dashboard_administration.html
+      output: web, pdf
+    
