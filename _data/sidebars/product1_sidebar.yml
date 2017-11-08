@@ -34,7 +34,7 @@ entries:
       url: signup.html
       output: web, pdf
     - title: Select your Dashboard
-      url: /p1_sample5.html
+      url: select_dashboard.html
       output: web, pdf
     
   - title: Configure the Dashboard
