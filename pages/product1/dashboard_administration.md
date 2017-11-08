@@ -1,5 +1,5 @@
 ---
-title: Dashboard Views
+title: Dashboard Administration
 tags: 
 type: 
 homepage: 

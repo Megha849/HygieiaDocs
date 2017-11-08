@@ -5,7 +5,7 @@ type:
 homepage: 
 toc: true
 sidebar: product1_sidebar
-permalink: widget_view.html
+permalink: product_view.html
 ---
 
 The product view displays each configured product's progression from code commit to deployment. To configure the Product Dashboard:

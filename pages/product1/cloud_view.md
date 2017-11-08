@@ -5,7 +5,7 @@ type:
 homepage: 
 toc: true
 sidebar: product1_sidebar
-permalink: widget_view.html
+permalink: cloud_view.html
 ---
 
 The cloud view gives details about cloud resources and applications, including instance count, storage, and utilization details. To configure the Cloud Dashboard:

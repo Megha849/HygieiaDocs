@@ -5,7 +5,7 @@ type:
 homepage: 
 toc: true
 sidebar: product1_sidebar
-permalink: widget_view.html
+permalink: pipeline_view.html
 ---
 
 The pipeline view pulls back to show each component’s lifecycle progression through the development, testing, and deployment stages. To configure your delivery pipeline through the pipeline stages:
