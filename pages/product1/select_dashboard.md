@@ -7,6 +7,7 @@ toc: true
 sidebar: product1_sidebar
 permalink: select_dashboard.html
 ---
+
 ## Select your Dashboard
 
 Once you login to the Hygieia dashboard, you can view the existing dashboards categorized as follows:
