@@ -1,8 +1,8 @@
 ---
-title: Dashboard Users
+title: Signup and Login
 tags: 
 homepage: 
-toc: false
+toc: true
 sidebar: product1_sidebar
 permalink: signup.html
 ---
