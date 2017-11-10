@@ -55,7 +55,7 @@ To remove an admin:
 - In the 'Admin' column, select an admin, and then click the right-arrow button.
   The username is displayed in the 'Admin' column.
 
-### API Token for User Authentication
+### Generate API Token 
 
 Generate an API token for basic authentication to secure APIs. To generate an API token:
 
