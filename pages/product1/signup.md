@@ -99,7 +99,7 @@ To delete a template:
 
 Note: You cannot delete templates that are being used in existing dashboards. 
 
-## Sign up and Login Instructions
+## User Sign up and Login Instructions
 
 To create an account for a new user:
 
