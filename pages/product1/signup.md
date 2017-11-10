@@ -92,7 +92,10 @@ To edit the template:
 2. Check/uncheck the widget options to add/delete widgets from the dashboard.
 3. Click Save.
 
-To delete a template, click the Delete icon beside the template name. The template is deleted.
+To delete a template:
+
+- Click the Delete icon beside the template name. System prompts a message to confirm or cancel deletion. Click Delete to confirm deletion.
+  The template is deleted.
 
 Note: You cannot delete templates that are being used in existing dashboards. 
 
