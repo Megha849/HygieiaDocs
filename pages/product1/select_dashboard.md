@@ -11,9 +11,9 @@ permalink: select_dashboard.html
 ## Select your Dashboard
 
 Once you login to the Hygieia dashboard, you can view the existing dashboards categorized as follows:
-- All dashboards Tab
-- Team dashboard Tab
-- Product dashboard Tab
+- All dashboards tab
+- Team dashboard tab
+- Product dashboard tab
 
 To find a particular dashboard, filter the list by entering all or part of the dashboard name in the 'Search' field.
 
