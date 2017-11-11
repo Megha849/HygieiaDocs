@@ -17,7 +17,7 @@ Hygieia dashboards provide the following options for user authentication:
 Single Sign On (SSO) 
 --->
 
-To modify the user authentication type for the dashboard, see the [API Properties](hygieia/api/api.md) file.
+To modify the user authentication type for the dashboard, see the [API Properties](api/api.md) file.
 
 Before you login to the Hygieia dashboard, choose a login type:
 - Standard Login
