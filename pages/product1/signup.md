@@ -17,7 +17,7 @@ Hygieia dashboards provide the following options for user authentication:
 Single Sign On (SSO) 
 --->
 
-To modify the user authentication type for the dashboard, see the [API Properties](/api/api.md) file.
+To modify the user authentication type for the dashboard, see the [API Properties](HygieiaDocs/api/api.md) file.
 
 Before you login to the Hygieia dashboard, choose a login type:
 - Standard Login
@@ -49,7 +49,7 @@ The 'admin' user is created for the dashboard.
 
 In the Admin screen, the 'Manage Admins' tab displays a list of all users. To add additional dashboard administrators:
 
-- In the 'Users' column, select a user, and then click the right-arrow buttom. 
+- In the 'Users' column, select a user, and then click the right-arrow button. 
   The username is displayed in the 'Admin' column. 
 
 To find users, filter the list by entering all or part of a user name in the 'Search' field.
