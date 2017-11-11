@@ -13,14 +13,18 @@ Hygieia dashboards provide the following options for user authentication:
 
 - LDAP allows you to use your LDAP server to authenticate users.
 - Standard authentication uses an internal database of users and passwords. If you choose to create an internal database, the user names and passwords will not be in sync with the LDAP server.
-- Single Sign On (SSO) 
+<!--- 
+Single Sign On (SSO) 
+--->
 
-To modify the user authentication type for the dashbaord, see the [API Properties]() file.
+To modify the user authentication type for the dashboard, see the [API Properties](hygieia/api/api.md) file.
 
 Before you login to the Hygieia dashboard, choose a login type:
 - Standard Login
 - LDAP Login
-- Single Sign On (SSO)
+<!--- 
+Single Sign On (SSO) 
+--->
 
 ## Create and Manage Admin Users 
 

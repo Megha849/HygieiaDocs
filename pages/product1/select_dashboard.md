@@ -1,5 +1,5 @@
 ---
-title: Select/Create your Dashboard
+title: Select/Create Your Dashboard
 tags: 
 type: 
 homepage: 
@@ -8,7 +8,7 @@ sidebar: product1_sidebar
 permalink: select_dashboard.html
 ---
 
-## Select your Dashboard
+## Select Your Dashboard
 
 Once you login to the Hygieia dashboard, you can view the existing dashboards categorized as follows:
 - All dashboards tab
