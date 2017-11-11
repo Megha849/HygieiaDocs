@@ -33,7 +33,7 @@ entries:
     - title: Signup and Login
       url: signup.html
       output: web, pdf
-    - title: Select your Dashboard
+    - title: Select Your Dashboard
       url: select_dashboard.html
       output: web, pdf
     
