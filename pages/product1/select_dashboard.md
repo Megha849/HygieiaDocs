@@ -10,12 +10,12 @@ permalink: select_dashboard.html
 
 ## Select Your Dashboard
 
-Once you login to the Hygieia dashboard, you can view the existing dashboards categorized as follows:
+Once you log in to the Hygieia dashboard, you can view the existing dashboards categorized as follows:
 - All dashboards tab
 - Team dashboard tab
 - Product dashboard tab
 
-To find a particular dashboard, filter the list by entering all or part of the dashboard name in the 'Search' field.
+To find a dashboard, filter the list by entering all or part of the dashboard name in the 'Search' field.
 
 #### All Dashboards Tab
 
@@ -54,7 +54,7 @@ To create a new dashboard:
 	 - Any custom template created by the dashboard administrator is displayed here
 	 
      For product dashboard, the dashboard template is not applicable.
-   - Enter the dashboard title. The title should have a  minimum of 6 characters.
+   - Enter the dashboard title. The title should have a minimum of 6 characters.
    - Enter a business service name.
    - Enter a Business Application Type to support the business function.
 3. Click 'Create'. 

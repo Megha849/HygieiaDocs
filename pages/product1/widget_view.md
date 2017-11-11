@@ -27,14 +27,17 @@ The widget view gives detailed information about the features, code contribution
 To configure a widget in the dashboard:
 
 1. Click **Configure Widget** under the widget name for which you want to configure your DevOps Dashboard.
-   The Configure <Widget Name> Widget dialog box is invoked.
+
+   The 'Configure [Widget Name] Widget' dialog box is invoked.
    
-2. In the Configure <Widget Name> Widget screen, enter configuration values for the fields, and then click **Save**.
-   The Dashboard widget displays values and status based on your configuration.
+2. In the 'Configure [Widget Name] Widget' screen, enter configuration values for the fields, and then click **Save**.
 
-To change the setting of a widget:
+   The Dashboard widget displays values based on your configuration.
 
-- Click the Settings icon, make any configuration changes, and then click Save.
+To change widget settings:
+
+- Click the Settings icon, make any configuration changes, and then click **Save**.
+
   The widget displays details based on the new configuration.
   
 To clear a configured widget:
@@ -88,8 +91,8 @@ Based on the configuration, Hygieia displays the following details in the Featur
 
 Hygieia displays the following details in the Repo widget:
 
-- Graphical representation of the number of issues, pulls and commits per day, over a time period.
-- Summary of commits, pulls, issues, commitors, contributors, and ideators for the current day, the previous week, and the last two weeks.
+- Graphical representation of the number of issues, pulls and commits per day, versus time interval.
+- Summary of commits, pulls, issues, committers, contributors, and ideators for the current day, the previous week, and the last two weeks.
 
 ### Configure Build Widget
 
@@ -100,13 +103,15 @@ Hygieia displays the following details in the Repo widget:
 2. Click **Save**. The Build Widget is configured for the selected repo.
 
 Hygieia displays the following details in the Build widget:
-- Graphical representation of the number of issues, pulls and commits per day, over a time period.
-- Summary of commits, pulls, issues, commitors, contributors, and ideators for the current day, the previous week, and the last two weeks.
+
+- Graphical representation of the number of issues, pulls and commits per day, versus time interval.
+- Summary of commits, pulls, issues, committers, contributors, and ideators for the current day, the previous week, and the last two weeks.
 - Total number of builds in the current day, the previous week, and the last two weeks. 
 
 ### Configure Quality and Performance Widget
 
 1. Click **Configure widget** to invoke the 'Configure Code Analysis Widget' screen. In this screen, enter the following details:
+
    - Static Code Analysis
    - Security Scan
    - Open Source Scan
@@ -135,6 +140,7 @@ In the Performance widget, Hygieia displays performance details based on unit an
 ### Configure Deploy Widget
 
 1. In the Performance tab, click **Configure widget** to invoke the 'Configure Deploy Widget' screen. In this screen, enter the following details:
+
    - Select the deployment application.
    - Enter the criteria to ignore the environment failures pattern.
    - Check the 'Aggregate servers' box to avoid server duplication.
@@ -143,19 +149,19 @@ In the Performance widget, Hygieia displays performance details based on unit an
 Hygieia displays the following details in the Deploy widget:
 
 - Application deployment date
-- List of all enviroments deployed for the application
+- List of all environments deployed for the application
 - Last updated date for each environment
 - Number of servers up or down in each environment
 
-Click an application environment to view additional artifact details from your application deployment tool, incluing:
+Click an application environment to view additional artifact details from your application deployment tool, including:
  
 - Last updated date of the selected application environment
 - Deployment date for the artifact  
-- Version Num of the artifact
+- Version Number of the artifact
 - Server name
 - server status (up or down)
 
-Click 'View in <deployment tool name>' to view the application enviroment details in the deployment tool.
+Click 'View in [deployment tool name]' to view the application environment details in the deployment tool.
 
 ### Configure Monitor Widget
 
@@ -163,7 +169,7 @@ Click 'View in <deployment tool name>' to view the application enviroment detail
    - In 'Our Services' section, enter the service name to appear on the widget.
    - Enter the service URL you want to monitor on the dashboard.
      Click the add button to add additional services.
-   - In the 'Dependent Services' section, select a any dependent service that you want to monitor from the drop-down list.
+   - In the 'Dependent Services' section, select any dependent service that you want to monitor from the drop-down list.
      Click the add button to add any additional services.
 2. Click **Save**.
 
@@ -175,5 +181,5 @@ Click on each service listed in the widget to add add/modify the service status.
 1. Click **Configure widget** to invoke the 'Monitor Configuration' screen. In this screen, enter the following details:
    - Select HipChat as the chat engine from the drop-down list. 
    - Enter the URL to the ChatOps Server
-   - Enter Room Name and Room Auth Token to conect to the chat engine.
+   - Enter Room Name and Room Auth Token to connect to the chat engine.
 2. Click **Save**.
