@@ -10,7 +10,7 @@ repository: 'MeghaMyWork/HygieiaDocs'
 
 relative_links:
   enabled:     true
-  collections: false
+  collections: true
 
 topnav_title: Hygieia Documentation
 # this appears on the top navigation bar next to the home button
