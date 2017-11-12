@@ -68,9 +68,9 @@ Generate an API token for basic authentication to secure APIs. To generate an AP
 3. Select an Expiration Date using the calendar button.
 4. Click 'Create'. The generated API key is displayed. 
 
-Note: The API key is visible only until the 'Generate API Token' dialog box is open.
+**Note:** The API key is visible only until the 'Generate API Token' dialog box is open.
 
-Copy the API token to the [API properties]() file.
+Copy the API token to the [API properties](../hygieia/api/api.md) file.
 
 To know more about securing basic authentication for APIs, see ['Secure APIs Basic Authentication'](../hygieia/api/api.md#secure-apis-basic-authentication).
 
@@ -103,7 +103,7 @@ To delete a template:
 
 Note: You cannot delete templates that are being used in existing dashboards. 
 
-## User Sign up and Login Instructions
+## User Signup and Login Instructions
 
 To create an account for a new user:
 
