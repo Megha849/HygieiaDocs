@@ -70,7 +70,7 @@ Generate an API token for basic authentication to secure APIs. To generate an AP
 
 **Note:** The API key is visible only until the 'Generate API Token' dialog box is open.
 
-Copy the API token to the [API properties](../hygieia/api/api.md) file.
+Copy the API token to the [API properties](../hygieia/api/api.md#api-properties-file) file.
 
 To know more about securing basic authentication for APIs, see ['Secure APIs Basic Authentication'](../hygieia/api/api.md#secure-apis-basic-authentication).
 
@@ -101,7 +101,7 @@ To delete a template:
 - Click the Delete icon beside the template name. System prompts a message to confirm or cancel deletion. Click Delete to confirm deletion.
   The template is deleted.
 
-Note: You cannot delete templates that are being used in existing dashboards. 
+**Note:** You cannot delete templates that are being used in existing dashboards. 
 
 ## User Signup and Login Instructions
 

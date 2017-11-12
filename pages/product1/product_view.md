@@ -21,10 +21,26 @@ The product view displays each configured product's progression from code commit
 
 The product dashboard displays averages and trends calculated over a 90-day period. For details more details on the calculations displayed on the Product Dashboard, see the following screenshots:
 
+Commit Stage:
+
 [!Image](http://www.capitalone.io/Hygieia/media/images/h2-commit-stage.png)
+
+Build Stage:
+
 [!Image](http://www.capitalone.io/Hygieia/media/images/h2-build-stage.png)
+
+Commit Details at every stage:
+
 [!Image](http://www.capitalone.io/Hygieia/media/images/h2-commit-details-stage.png)
+
+Deployment Stage:
+
 [!Image](http://www.capitalone.io/Hygieia/media/images/h2-deploy-stages.png)
-[!Image](http://www.capitalone.io/Hygieia/media/images/h2-health-details.png)
+
+Production Stage:
+
 [!Image](http://www.capitalone.io/Hygieia/media/images/h2-prod-stage.png)
 
+Pipeline Health Details:
+
+[!Image](http://www.capitalone.io/Hygieia/media/images/h2-health-details.png)
