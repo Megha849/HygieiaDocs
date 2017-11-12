@@ -33,7 +33,7 @@ To configure the Hygieia audit API layer, execute the following steps:
 
 *	**Step 2: Set Parameters in the API Properties File**
 
-	Set the configurable parameters in the `dashboard.properties` file to connect to the Dashboard MongoDB database instance, including properties required by the audit API module. To configure the parameters, refer to the [API properties](#api-properties-file) file.
+	Set the configurable parameters in the `api-audit.properties` file to connect to the Dashboard MongoDB database instance, including properties required by the audit API module. To configure the parameters, refer to the [API properties](#audit-api-properties-file) file.
 
 	For more information about the server configuration, see the Spring Boot [documentation](http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#boot-features-external-config-application-property-files).
 
@@ -53,9 +53,9 @@ To configure the Hygieia audit API layer, execute the following steps:
 	server.port=8080
 	```
 
-	**Note**: The 'jasypt.encryptor.password' system property is used to decrypt the database password. For more information, refer to [Encrypted Properties](api/api.md#encrypted-properties)
+	**Note**: The 'jasypt.encryptor.password' system property is used to decrypt the database password. For more information, see [Encrypted Properties](../api/api.md#encrypted-properties) section in the Getting Started guide.
 
-## API Properties File
+## Audit API Properties File
 
 The sample `api-audit.properties` file lists parameters with sample values to configure the audit API layer. Set the parameters based on your environment setup.
 

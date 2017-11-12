@@ -17,7 +17,7 @@ Hygieia dashboards provide the following options for user authentication:
 Single Sign On (SSO) 
 --->
 
-To modify the user authentication type for the dashboard, see the [API Properties](HygieiaDocs/api/api.md) file.
+To modify the user authentication type for the dashboard, see the [API Properties](../hygieia/api/api.md#api-properties-file) file.
 
 Before you login to the Hygieia dashboard, choose a login type:
 - Standard Login
@@ -72,7 +72,7 @@ Note: The API key is visible only until the 'Generate API Token' dialog box is o
 
 Copy the API token to the [API properties]() file.
 
-To know more about securing basic authentication for APIs, see ['Secure APIs Basic Authentication'](api.md#secure-apis-basic-authentication).
+To know more about securing basic authentication for APIs, see ['Secure APIs Basic Authentication'](../hygieia/api/api.md#secure-apis-basic-authentication).
 
 ### Select a Dashboard Theme
 
