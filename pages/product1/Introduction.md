@@ -10,7 +10,7 @@ redirect_from:
   - /index.html
   - /hygieia/Introduction.html
 ---
-
+[Build Docker](../hygieia/Build/builddocker.md)
 ## Introduction
 
 Hygieia dashboard is a single, configurable, easy-to-use dashboard to visualize near real-time status of the entire delivery pipeline. In addition, it provides a continuous feedback loop for any DevOps organization.
