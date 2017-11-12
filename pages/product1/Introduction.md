@@ -10,7 +10,7 @@ redirect_from:
   - /index.html
   - /hygieia/Introduction.html
 ---
-[Build Docker](../hygieia/Build/builddocker.md)
+
 ## Introduction
 
 Hygieia dashboard is a single, configurable, easy-to-use dashboard to visualize near real-time status of the entire delivery pipeline. In addition, it provides a continuous feedback loop for any DevOps organization.
@@ -38,7 +38,7 @@ Before you begin to configure your Dashboard, make sure the following prerequisi
 For detailed instructions on configuring each of the components of Hygieia, see the [Configuration Procedure](http://www.capitalone.io/Hygieia/getting_started.html) section in the Getting Started guide.
   
 - If you are configuring Hygieia using Docker, make sure the Docker Instances are up and running for all components of Hygieia.
-  For detailed instructions on configuring a Docker Image, see the [Build Docker](/pages/hygieia/Build/builddocker.md) section in the Getting Started guide.
+  For detailed instructions on configuring a Docker Image, see the [../hygieia/Build/builddocker.md](/pages/hygieia/Build/builddocker.md) section in the Getting Started guide.
   
 Continue setting up your Dashboard if all the prerequisites are met.
 
