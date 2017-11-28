@@ -49,11 +49,11 @@ To configure Hygieia, execute the following steps:
 
 	The output `.jar` file is generated in the `\target` folder for each component of Hygieia, including the Collectors.
 
-	*	**Step 2: Set Parameters in the Properties File**
+*	**Step 2: Set Parameters in the Properties File**
 	
 	Set the configurable parameters in the `.properties` file to connect to each component of Hygieia. For more information about the server configuration, see the Spring Boot [documentation](http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#boot-features-external-config-application-property-files).
 
-	*	**Step 3: Run Each Component**
+*	**Step 3: Run Each Component**
 
 	To run the executable file for API module, change directory to 'api\target' and then execute the following command from the command prompt:
 
