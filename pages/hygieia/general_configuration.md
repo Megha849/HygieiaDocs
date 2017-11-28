@@ -7,15 +7,13 @@ sidebar: hygieia_sidebar
 permalink: general_configuration.html
 ---
 
-Before you begin to install Hygieia, make sure to configure the corporate proxy applicable to your organization (HTTP_PROXY, HTTPS_PROXY, or using Cntlm).
-
 If you do not already have Hygieia installed, you can download or clone Hygieia from the [GitHub repo](https://github.com/capitalone/Hygieia). For information on cloning a repository, see [GitHub Documentation](https://help.github.com/articles/cloning-a-repository/).
  
 ## Build Hygieia
 
-Hygieia uses Spring Boot to package the components as an executable JAR file with dependencies. To build the project, use maven build. To run maven after installing it, configure the settings.xml file. For details see, ‘Proxy Authentication’.
-
 To package all components of Hygieia's source code into executable JAR files, run the maven build. Before you build Hygieia using Maven, make sure to configure the `settings.xml` file. For more details, see [Proxy Authentication](proxyauthentication.md). 
+
+Hygieia uses Spring Boot to package the components as an executable JAR file with dependencies. 
 
 To configure Hygieia, execute the following steps:
 
@@ -47,7 +45,7 @@ To configure Hygieia, execute the following steps:
 			and so on. 		   
 	~~~
 
-	The output `.jar` file is generated in the `\target` folder for each component of Hygieia, including the Collectors.
+	The output `.jar` file is generated in the `\target` folder for each component of Hygieia, including collectors.
 
 *	**Step 2: Set Parameters in the Properties File**
 	
@@ -81,26 +79,48 @@ To configure Hygieia, execute the following steps:
 
 ### Encrypted Properties
 
-Properties that are recommended not to be stored in plain text can be encrypted/decrypted using jasypt. Encrypted properties are enclosed in keyword ENC(), that is, ENC(thisisanencryptedproperty).
+Properties that are recommended not to be stored in plain text can be encrypted/decrypted using jasypt.Encrypted properties are enclosed in keyword ENC(), that is, ENC(thisisanencryptedproperty).
+
 To generate an encrypted property, run the following command:
+
+```
 java -cp ~/.m2/repository/org/jasypt/jasypt/1.9.2/jasypt-1.9.2.jar  org.jasypt.intf.cli.JasyptPBEStringEncryptionCLI input="dbpassword" password=hygieiasecret algorithm=PBEWithMD5AndDES
-where,	
+```
+where,
+
 dbpassword - Property value being encrypted, and 
-hygieiasecret - the secret.
-When you run the API, this secret has to be passed as a system property using -Djasypt.encryptor.password=hygieiasecret in order to decrypt the property.
-When using docker, pass the environment variable docker run -t -p 8080:8080 -v ./logs:/hygieia/logs -e "SPRING_DATA_MONGODB_HOST=127.0.0.1" -e "JASYPT_ENCRYPTOR_PASSWORD=hygieiasecret" -i hygieia-api:latest.
-For additional information, see jasypt spring boot documentation.
-Tip: When using GitLab CI Runner, specify the value for JASYPT_ENCRYPTOR_PASSWORD as a secure variable. To add secure variables to a Gitlab project, navigate to Project Settings > Variables > Add Variable.
-By default, a secure variable’s value is not visible in the build log and can only be configured by a project administrator.
+hygieiasecret - the secret. 
+
+When you run the API, this secret has to be passed as a system property using `-Djasypt.encryptor.password=hygieiasecret` in order to decrypt the property.
+
+When using docker, pass the environment variable `docker run -t -p 8080:8080 -v ./logs:/hygieia/logs -e "SPRING_DATA_MONGODB_HOST=127.0.0.1" -e "JASYPT_ENCRYPTOR_PASSWORD=hygieiasecret" -i hygieia-api:latest`.
+
+For additional information, see jasypt spring boot [documentation](https://github.com/ulisesbocchio/jasypt-spring-boot/blob/master/README.md).
+
+**Tip**: When using GitLab CI Runner, specify the value for JASYPT_ENCRYPTOR_PASSWORD as a secure variable. To add secure variables to a Gitlab project, navigate to Project Settings > Variables > Add Variable. 
+
+By default, a secure variable's value is not visible in the build log and can only be configured by a project administrator.
 
 ### Encryption for Private Repos
 
-1.	From module core generate a secret key.
-java -jar <path-to-jar>/core-2.0.5-SNAPSHOT.jar com.capitalone.dashboard.util.Encryption
-Add this generated key to api.properties
-api.properties
-key=<your-generated-key>
-2.	Add the same key to your repo settings file. This is needed for the target collector to decrypt your saved repo password. For example, if your repo is github add the following.
-github.properties
-github.key=<your-generated-key>
+1. From the core module, generate a secret key.
 
+   ```bash
+   java -jar <path-to-jar>/core-2.0.5-SNAPSHOT.jar com.capitalone.dashboard.util.Encryption
+   ```
+
+2. Add the generated key to the API properties file.
+
+   ```bash
+   #api.properties
+   key=<your-generated-key>
+   ```
+
+3. Add the same key to your repo settings file. This is required for the target collector to decrypt your saved repo password.
+
+   For example, if your repo is GitHub, add the following to the `github.properties` file:
+
+   ```bash
+   #github.properties
+   github.key=<your-generated-key>
+   ```
