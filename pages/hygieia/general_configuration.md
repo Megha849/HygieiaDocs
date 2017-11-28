@@ -86,9 +86,11 @@ To generate an encrypted property, run the following command:
 ```
 java -cp ~/.m2/repository/org/jasypt/jasypt/1.9.2/jasypt-1.9.2.jar  org.jasypt.intf.cli.JasyptPBEStringEncryptionCLI input="dbpassword" password=hygieiasecret algorithm=PBEWithMD5AndDES
 ```
+
 where,
 
 dbpassword - Property value being encrypted, and 
+
 hygieiasecret - the secret. 
 
 When you run the API, this secret has to be passed as a system property using `-Djasypt.encryptor.password=hygieiasecret` in order to decrypt the property.
