@@ -9,7 +9,7 @@ permalink: general_configuration.html
 
 Before you begin to install Hygieia, make sure to configure the corporate proxy applicable to your organization (HTTP_PROXY, HTTPS_PROXY, or using Cntlm).
 
-f you do not already have Hygieia installed, you can download or clone Hygieia from the [GitHub repo](https://github.com/capitalone/Hygieia). For information on cloning a repository, see [GitHub Documentation](https://help.github.com/articles/cloning-a-repository/).
+If you do not already have Hygieia installed, you can download or clone Hygieia from the [GitHub repo](https://github.com/capitalone/Hygieia). For information on cloning a repository, see [GitHub Documentation](https://help.github.com/articles/cloning-a-repository/).
  
 ## Build Hygieia
 

@@ -21,7 +21,7 @@ permalink: features.html
  
  `2016-11-14 17:08:25,452 ERROR c.c.d.service.ServiceServiceImpl - https://abc1234.com failed with sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target`
  
- to resolve this please import the certificate into the JVM running your api using java keytool. 
+ to resolve this please import the certificate into the JVM running your api using java keytool.
  
  Also at this time, the monitoring widget does not supports any proxy configuration.
  
