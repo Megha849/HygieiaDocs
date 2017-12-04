@@ -10,7 +10,7 @@ permalink: product_view.html
 
 The product view displays each configured product's progression from code commit to deployment. To configure the Product Dashboard:
 
-1. Create a new dashboard. For steps, see [Create a New Dashboard].
+1. Create a new dashboard. For steps, see [Create a New Dashboard](select_dashboard.md#create-a-new-dashboard).
 2. In the product dashboard screen, click 'Add a Team'. Enter the following details in the 'Add team' popup window:
    - Select a team dashboard from the drop-down list. The list displays all team dashboards created in Hygieia.
    - Optionally, specify a custom team name, and then click 'Add this team'.

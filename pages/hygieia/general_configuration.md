@@ -37,7 +37,7 @@ To configure Hygieia, execute the following steps:
 			│    └── VersionOne
 			└─ Repos
 			'     ├── GitHub
-			'     ├── Gitlab
+			'     ├── GitLab
 			'     ├── Subversion 
 			'     └── Bitbucket
 			'
@@ -91,15 +91,15 @@ where,
 
 dbpassword - Property value being encrypted, and 
 
-hygieiasecret - the secret. 
+hygieiasecret - the secret.
 
-When you run the API, this secret has to be passed as a system property using `-Djasypt.encryptor.password=hygieiasecret` in order to decrypt the property.
+When you run the API, this secret should be passed as a system property using `-Djasypt.encryptor.password=hygieiasecret` to decrypt the property.
 
-When using docker, pass the environment variable `docker run -t -p 8080:8080 -v ./logs:/hygieia/logs -e "SPRING_DATA_MONGODB_HOST=127.0.0.1" -e "JASYPT_ENCRYPTOR_PASSWORD=hygieiasecret" -i hygieia-api:latest`.
+When using Docker, pass the environment variable `docker run -t -p 8080:8080 -v ./logs:/hygieia/logs -e "SPRING_DATA_MONGODB_HOST=127.0.0.1" -e "JASYPT_ENCRYPTOR_PASSWORD=hygieiasecret" -i hygieia-api:latest`.
 
 For additional information, see jasypt spring boot [documentation](https://github.com/ulisesbocchio/jasypt-spring-boot/blob/master/README.md).
 
-**Tip**: When using GitLab CI Runner, specify the value for JASYPT_ENCRYPTOR_PASSWORD as a secure variable. To add secure variables to a Gitlab project, navigate to Project Settings > Variables > Add Variable. 
+**Tip**: When using GitLab CI Runner, specify the value for JASYPT_ENCRYPTOR_PASSWORD as a secure variable. To add secure variables to a GitLab project, navigate to Project Settings > Variables > Add Variable.
 
 By default, a secure variable's value is not visible in the build log and can only be configured by a project administrator.
 
