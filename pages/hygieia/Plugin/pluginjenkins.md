@@ -59,7 +59,7 @@ To install the plugin in Jenkins:
 
 5. In Jenkins pipeline syntax page, Hygieia publish steps are displayed:
 
-![Image](https://megha849.github.io/HygieiaDocs/media/images/jenkins2.0-steplist.png)
+![Image](../HygieiaDocs/media/images/jenkins2.0-steplist.png)
 
 6. Select a step (for example, Hygieia Deploy Step), fill in the required information and click 'Generate Pipeline Script'. Copy the generated script to the pipeline script:
 
