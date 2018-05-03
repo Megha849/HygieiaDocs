@@ -25,7 +25,7 @@ entries:
       url: /getting_started.html
       output: web, pdf
       type: homepage
-    - title: Why Should I Care about Hygieia and What Makes It Important?
+    - title: What Makes Hygieia Important?
       url: /architecture.html
       output: web, pdf
       type: homepage
