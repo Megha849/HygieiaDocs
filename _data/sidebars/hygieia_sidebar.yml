@@ -18,14 +18,14 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Home/Getting Started
+  - title: Getting Started
     output: web, pdf
     folderitems:
-    - title: Introduction
+    - title: What's the Macro View of Hygieia?
       url: /getting_started.html
       output: web, pdf
       type: homepage
-    - title: Architecture
+    - title: Why Should I Care about Hygieia and What Makes It Important?
       url: /architecture.html
       output: web, pdf
       type: homepage
