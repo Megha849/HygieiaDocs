@@ -30,10 +30,10 @@ entries:
       output: web, pdf
       type: homepage
       
-  - title: Installation/Setup Instructions
+  - title: Hygieia's Dashboards
     output: web, pdf
     folderitems:
-    - title: Setup Instructions
+    - title: Hygieia's Dashboards
       url: /setup.html
       output: web, pdf
  
