@@ -19,7 +19,7 @@ To create an account for an **admin** user:
 1. Click **Signup** on the login page.
 2. Enter **admin** as the username, specify and confirm the password, and then click **Signup**.
 
-![Image]()
+![Image](https://github.com/Megha849/HygieiaDocs/blob/gh-pages/media/images/adminuser.png)
 
 ### Manage Administrators for your Hygieia Instance
 
@@ -35,7 +35,7 @@ To remove an admin:
 - In the **Admin** column, select an admin, and then click the right-arrow button.
   The username is displayed in the **Admin** column.
 
-![Image]()  
+![Image](https://github.com/Megha849/HygieiaDocs/blob/gh-pages/media/images/manage_admins.png)  
   
 ### Create Other Users in Hygieia
 
