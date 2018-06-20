@@ -4,7 +4,7 @@ Hygieia Documentation
    
 
 | Price         | Advantages         |
-|===============+====================|
+|===============|====================|
 | $1.34         | - built-in wrapper |
 |               | - bright color     |
 | $2.10         | - cures scurvy     |
