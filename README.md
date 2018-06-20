@@ -6,6 +6,6 @@ Hygieia Documentation
 | Price         | Advantages         |
 |---------------|--------------------|
 | $1.34         | <ul><li>item1</li><li>item2</li></ul> |
-|               | - bright color     |
+|               | - bright color  <br />  - tasty |
 | $2.10         | - cures scurvy     |
 |               | - tasty            |
